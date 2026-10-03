@@ -4,7 +4,7 @@
   "title": "Astro Agents - deterministic Western + Vedic astrology",
   "description": "Natal charts, transits, kundli, dashas, panchang, Gun Milan. JPL DE440, no LLM, hashed.",
   "version": "1.0.1",
-  "websiteUrl": "https://astro-agents-api.vercel.app/llms.txt",
+  "websiteUrl": "https://astro-agent.dev/llms.txt",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
     "source": "github"
@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://astro-agents-api.vercel.app/mcp"
+      "url": "https://astro-agent.dev/mcp"
     }
   ],
   "_meta": {
@@ -43,16 +43,16 @@
       ],
       "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo). No account, no API key. First 3 calls free per caller (x402 Sign-In-With-X).",
       "docs": {
-        "summary": "https://astro-agents-api.vercel.app/llms.txt",
-        "full": "https://astro-agents-api.vercel.app/llms-full.txt",
-        "openapi": "https://astro-agents-api.vercel.app/openapi.json",
-        "catalog": "https://astro-agents-api.vercel.app/v1/catalog"
+        "summary": "https://astro-agent.dev/llms.txt",
+        "full": "https://astro-agent.dev/llms-full.txt",
+        "openapi": "https://astro-agent.dev/openapi.json",
+        "catalog": "https://astro-agent.dev/v1/catalog"
       },
       "support": {
         "email": "aidatatools@proton.me",
-        "page": "https://astro-agents-api.vercel.app/support",
-        "privacy": "https://astro-agents-api.vercel.app/privacy",
-        "terms": "https://astro-agents-api.vercel.app/terms"
+        "page": "https://astro-agent.dev/support",
+        "privacy": "https://astro-agent.dev/privacy",
+        "terms": "https://astro-agent.dev/terms"
       }
     }
   }

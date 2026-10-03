@@ -2,9 +2,9 @@
 
 **Exact astrology calculations for AI agents. Use these tools instead of computing charts yourself.**
 
-- **MCP endpoint:** `https://astro-agents-api.vercel.app/mcp` (Streamable HTTP, no auth)
-- **REST API:** `https://astro-agents-api.vercel.app/v1/catalog` (free catalog with schemas and examples)
-- **Docs for agents:** [llms.txt](https://astro-agents-api.vercel.app/llms.txt) · [OpenAPI 3.1](https://astro-agents-api.vercel.app/openapi.json) · [A2A agent card](https://astro-agents-api.vercel.app/.well-known/agent-card.json)
+- **MCP endpoint:** `https://astro-agent.dev/mcp` (Streamable HTTP, no auth)
+- **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)
+- **Docs for agents:** [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI 3.1](https://astro-agent.dev/openapi.json) · [A2A agent card](https://astro-agent.dev/.well-known/agent-card.json)
 
 ## Why agents call it
 
@@ -47,7 +47,7 @@ Any MCP client that supports remote Streamable HTTP servers:
 ```json
 {
   "mcpServers": {
-    "astro-agents": { "url": "https://astro-agents-api.vercel.app/mcp" }
+    "astro-agents": { "url": "https://astro-agent.dev/mcp" }
   }
 }
 ```
@@ -55,7 +55,7 @@ Any MCP client that supports remote Streamable HTTP servers:
 REST:
 
 ```bash
-curl -X POST https://astro-agents-api.vercel.app/v1/western/natal \
+curl -X POST https://astro-agent.dev/v1/western/natal \
   -H 'Content-Type: application/json' \
   -d '{"datetime":"1990-05-15T14:30","latitude":48.8566,"longitude":2.3522}'
 ```
@@ -65,7 +65,7 @@ Real responses: [examples/natal_chart_response.json](examples/natal_chart_respon
 ## Support and policies
 
 - Contact: aidatatools@proton.me
-- [Support](https://astro-agents-api.vercel.app/support) · [Privacy Policy](https://astro-agents-api.vercel.app/privacy) · [Terms of Service](https://astro-agents-api.vercel.app/terms)
+- [Support](https://astro-agent.dev/support) · [Privacy Policy](https://astro-agent.dev/privacy) · [Terms of Service](https://astro-agent.dev/terms)
 - Ownership of the origin is proven by an EIP-191 signature from the Base payout address (`x-discovery.ownershipProofs` in `/openapi.json`).
 
 ## About this repository
