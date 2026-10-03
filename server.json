@@ -1,0 +1,53 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.aidatatools-dev/astro-agents",
+  "title": "Astro Agents - deterministic Western + Vedic astrology",
+  "description": "Natal charts, transits, kundli, dashas, panchang, Gun Milan. JPL DE440, no LLM, hashed.",
+  "version": "1.0.0",
+  "websiteUrl": "https://astro-agents-api.vercel.app/llms.txt",
+  "repository": {
+    "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://astro-agents-api.vercel.app/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "positioning": "Deterministic Western + Vedic astrology API for AI agents: JPL DE440 ephemeris, no LLM, reproducible SHA-256 hashes.",
+      "tools": {
+        "resolve_birth_time": "Local birth time + place -> exact UT, historical UTC offset, Delta T, Local Mean Time, true solar time. ($0.01 over REST; first 3 calls free)",
+        "planet_positions": "Tropical (or sidereal) longitudes, latitudes, speeds and retrograde flags of Sun..Pluto, nodes, Lilith. ($0.01 over REST; first 3 calls free)",
+        "aspects": "Aspects (with orb, exactness, applying/separating) for a moment, or for any longitudes you supply. ($0.02 over REST; first 3 calls free)",
+        "natal_chart": "Complete natal chart: planets in signs and houses, ascendant, MC, 11 house systems, aspects, summary. ($0.06 over REST; first 3 calls free)",
+        "transits": "Transits to a natal chart at a moment, and exact hit times over a window of up to a year. ($0.08 over REST; first 3 calls free)",
+        "synastry": "Relationship comparison: cross-aspects, house overlays both ways, composite midpoints. ($0.12 over REST; first 3 calls free)",
+        "nakshatras": "Sidereal nakshatra, pada and lord of every graha; janma nakshatra with gana, yoni, nadi, varna. ($0.02 over REST; first 3 calls free)",
+        "panchang": "Tithi, vara, nakshatra, yoga, karana with the exact time each ends, plus sunrise and sunset. ($0.02 over REST; first 3 calls free)",
+        "kundli": "Sidereal D1 + D9: lagna, 9 grahas with rashi, nakshatra, pada, house, dignity, combustion, bhavas. ($0.15 over REST; first 3 calls free)",
+        "kundli_full": "The kundli plus all Shodashavarga divisional charts D1..D60 (Parashara rules). ($0.32 over REST; first 3 calls free)",
+        "vimshottari_dasha": "Vimshottari maha/antar/pratyantar periods with exact dates, birth balance, and the running periods. ($0.10 over REST; first 3 calls free)",
+        "doshas": "Manglik (Kuja), Kaal Sarp and Sade Sati / Dhaiya, each with the exact rule applied and dates. ($0.15 over REST; first 3 calls free)",
+        "gun_milan": "36-point Ashtakoota marriage compatibility: all 8 kootas with reasons, doshas and Manglik check. ($0.25 over REST; first 3 calls free)",
+        "vedic_report": "Kundli + Vimshottari dashas + doshas + janma panchang in one call. ($0.50 over REST; first 3 calls free)"
+      },
+      "trust": [
+        "Positions from NASA/JPL DE440 (NASA/JPL), 1800-01-01..2200-01-01, via Skyfield: geocentric apparent, true equinox of date, IAU 2006/2000A.",
+        "Historical time zones resolved for you (IANA tz database, DST of the era, Local Mean Time); ambiguous or non-existent local times are flagged, never guessed.",
+        "Deterministic, no LLM: same input -> same bytes. Every response carries meta.input_sha256 and meta.result_sha256 (also as X-Input-SHA256 / X-Result-SHA256 headers); POST /v1/verify recomputes one.",
+        "Every convention is in the response: ayanamsa (name, true and mean value), house system, orbs, node type, dasha year length, dosha and koota rule sets.",
+        "Cross-validated against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1\", 15/16 divisional charts identically, all 11 house systems in structure."
+      ],
+      "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo). No account, no API key. First 3 calls free per caller (x402 Sign-In-With-X).",
+      "docs": {
+        "summary": "https://astro-agents-api.vercel.app/llms.txt",
+        "full": "https://astro-agents-api.vercel.app/llms-full.txt",
+        "openapi": "https://astro-agents-api.vercel.app/openapi.json",
+        "catalog": "https://astro-agents-api.vercel.app/v1/catalog"
+      }
+    }
+  }
+}

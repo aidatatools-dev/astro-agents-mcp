@@ -1,0 +1,256 @@
+{
+  "endpoint": "vedic/kundli",
+  "result": {
+    "subject": {
+      "time": {
+        "local_input": "1990-05-15T14:30",
+        "time_basis": "civil",
+        "timezone": "Asia/Kolkata",
+        "timezone_source": "resolved_from_coordinates",
+        "utc_offset": "+05:30",
+        "is_dst": false,
+        "utc": "1990-05-15T09:00:00Z",
+        "julian_day_ut": 2448026.875001,
+        "julian_day_tt": 2448026.875662,
+        "delta_t_seconds": 57.139,
+        "time_known": true,
+        "local_mean_time": "1990-05-15T14:08:50",
+        "true_solar_time": "1990-05-15T14:12:32",
+        "equation_of_time_minutes": 3.7067
+      },
+      "location": {
+        "latitude": 28.6139,
+        "longitude": 77.209
+      }
+    },
+    "settings": {
+      "zodiac": "sidereal",
+      "ayanamsa": {
+        "name": "lahiri",
+        "true_deg": 23.725764,
+        "mean_deg": 23.722507,
+        "true_dms": "23°43'33\""
+      },
+      "node_type": "mean",
+      "house_system": "whole_sign",
+      "varga_rules": "Parashara (BPHS); D24 counts forward from Cancer in even signs"
+    },
+    "lagna": {
+      "longitude": 151.904824,
+      "rashi": "Kanya",
+      "sign": "Virgo",
+      "sign_index": 5,
+      "degree_in_sign": 1.904824,
+      "position": "1°54'17\" Virgo",
+      "sign_lord": "Mercury",
+      "nakshatra": "Uttara Phalguni",
+      "nakshatra_index": 12,
+      "pada": 2,
+      "nakshatra_lord": "Sun",
+      "deity": "Aryaman",
+      "degree_in_nakshatra": 5.238157,
+      "fraction_elapsed": 0.392862
+    },
+    "grahas": [
+      {
+        "graha": "Sun",
+        "longitude": 30.549815,
+        "rashi": "Vrishabha",
+        "sign": "Taurus",
+        "sign_index": 1,
+        "degree_in_sign": 0.549815,
+        "position": "0°32'59\" Taurus",
+        "sign_lord": "Venus",
+        "nakshatra": "Krittika",
+        "nakshatra_index": 3,
+        "pada": 2,
+        "nakshatra_lord": "Sun",
+        "deity": "Agni",
+        "degree_in_nakshatra": 3.883149,
+        "fraction_elapsed": 0.291236,
+        "house": 9,
+        "retrograde": false,
+        "speed": 0.964203,
+        "dignity": null,
+        "navamsa_sign": "Capricorn"
+      },
+      {
+        "graha": "Moon",
+        "longitude": 271.893763,
+        "rashi": "Makara",
+        "sign": "Capricorn",
+        "sign_index": 9,
+        "degree_in_sign": 1.893763,
+        "position": "1°53'38\" Capricorn",
+        "sign_lord": "Saturn",
+        "nakshatra": "Uttara Ashadha",
+        "nakshatra_index": 21,
+        "pada": 2,
+        "nakshatra_lord": "Sun",
+        "deity": "Vishvedevas",
+        "degree_in_nakshatra": 5.227097,
+        "fraction_elapsed": 0.392032,
+        "house": 5,
+        "retrograde": false,
+        "speed": 12.326869,
+        "dignity": null,
+        "combust": false,
+        "distance_from_sun": 118.656052,
+        "navamsa_sign": "Capricorn"
+      },
+      {
+        "graha": "Mars",
+        "longitude": 324.515246,
+        "rashi": "Kumbha",
+        "sign": "Aquarius",
+        "sign_index": 10,
+        "degree_in_sign": 24.515246,
+        "position": "24°30'55\" Aquarius",
+        "sign_lord": "Saturn",
+        "nakshatra": "Purva Bhadrapada",
+        "nakshatra_index": 25,
+        "pada": 2,
+        "nakshatra_lord": "Jupiter",
+        "deity": "Aja Ekapada",
+        "degree_in_nakshatra": 4.515246,
+        "fraction_elapsed": 0.338643,
+        "house": 6,
+        "retrograde": false,
+        "speed": 0.742659,
+        "dignity": null,
+        "combust": false,
+        "distance_from_sun": 66.034569,
+        "navamsa_sign": "Taurus"
+      }
+    ],
+    "bhavas": [
+      {
+        "house": 1,
+        "sign": "Virgo",
+        "rashi": "Kanya",
+        "lord": "Mercury",
+        "occupants": []
+      },
+      {
+        "house": 2,
+        "sign": "Libra",
+        "rashi": "Tula",
+        "lord": "Venus",
+        "occupants": []
+      },
+      {
+        "house": 3,
+        "sign": "Scorpio",
+        "rashi": "Vrishchika",
+        "lord": "Mars",
+        "occupants": []
+      }
+    ],
+    "summary": {
+      "lagna_sign": "Virgo",
+      "lagna_rashi": "Kanya",
+      "lagna_lord": "Mercury",
+      "moon_sign": "Capricorn",
+      "moon_rashi": "Makara",
+      "sun_sign_sidereal": "Taurus",
+      "janma_nakshatra": "Uttara Ashadha",
+      "janma_nakshatra_pada": 2,
+      "janma_nakshatra_lord": "Sun",
+      "exalted": [
+        "Venus"
+      ],
+      "debilitated": [],
+      "retrograde": [
+        "Mercury",
+        "Saturn"
+      ],
+      "combust": []
+    },
+    "vargas": {
+      "D1": {
+        "varga": "D1",
+        "meaning": "Rashi (body, overall life)",
+        "lagna_sign": "Virgo",
+        "placements": {
+          "Sun": "Taurus",
+          "Moon": "Capricorn",
+          "Mars": "Aquarius",
+          "Mercury": "Aries",
+          "Jupiter": "Gemini",
+          "Venus": "Pisces",
+          "Saturn": "Capricorn",
+          "Rahu": "Capricorn",
+          "Ketu": "Cancer"
+        },
+        "houses": [
+          {
+            "house": 1,
+            "sign": "Virgo",
+            "occupants": []
+          },
+          {
+            "house": 2,
+            "sign": "Libra",
+            "occupants": []
+          },
+          {
+            "house": 3,
+            "sign": "Scorpio",
+            "occupants": []
+          }
+        ]
+      },
+      "D9": {
+        "varga": "D9",
+        "meaning": "Navamsa (spouse, dharma, planetary strength)",
+        "lagna_sign": "Capricorn",
+        "placements": {
+          "Sun": "Capricorn",
+          "Moon": "Capricorn",
+          "Mars": "Taurus",
+          "Mercury": "Leo",
+          "Jupiter": "Aquarius",
+          "Venus": "Sagittarius",
+          "Saturn": "Capricorn",
+          "Rahu": "Gemini",
+          "Ketu": "Sagittarius"
+        },
+        "houses": [
+          {
+            "house": 1,
+            "sign": "Capricorn",
+            "occupants": [
+              "Sun",
+              "Moon",
+              "Saturn"
+            ]
+          },
+          {
+            "house": 2,
+            "sign": "Aquarius",
+            "occupants": [
+              "Jupiter"
+            ]
+          },
+          {
+            "house": 3,
+            "sign": "Pisces",
+            "occupants": []
+          }
+        ]
+      }
+    }
+  },
+  "meta": {
+    "engine": "astro-agents/1.0.0",
+    "ephemeris": "NASA/JPL DE440 (1800-01-01..2200-01-01)",
+    "astronomy_library": "skyfield/1.55",
+    "frame": "geocentric apparent positions, true ecliptic and equinox of date (IAU 2006/2000A)",
+    "deterministic": true,
+    "llm_used": false,
+    "input_sha256": "fcd314ed8ac513bf91b6019201559d8441d19e20d0e0cc0c918cae67703f8670",
+    "result_sha256": "80cea312fedebd8ffdd1b8a5c0e78b32bb972dfc1405e5cb6bcf4228236c00b2",
+    "reproducibility": "result_sha256 = SHA-256 of the result serialized as JSON with sorted keys, no whitespace, UTF-8, floats rounded to 6 decimals. Same input + same engine version => same hash."
+  },
+  "example_note": "real output of engine 1.0.0; lists shortened to 3 items"
+}

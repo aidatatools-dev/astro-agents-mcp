@@ -1,0 +1,248 @@
+{
+  "endpoint": "western/natal",
+  "result": {
+    "subject": {
+      "time": {
+        "local_input": "1990-05-15T14:30",
+        "time_basis": "civil",
+        "timezone": "Europe/Paris",
+        "timezone_source": "resolved_from_coordinates",
+        "utc_offset": "+02:00",
+        "is_dst": true,
+        "utc": "1990-05-15T12:30:00Z",
+        "julian_day_ut": 2448027.020834,
+        "julian_day_tt": 2448027.021495,
+        "delta_t_seconds": 57.14,
+        "time_known": true,
+        "local_mean_time": "1990-05-15T12:39:24",
+        "true_solar_time": "1990-05-15T12:43:06",
+        "equation_of_time_minutes": 3.7054
+      },
+      "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      }
+    },
+    "settings": {
+      "zodiac": "tropical",
+      "house_system": "placidus",
+      "aspects": {
+        "types": [
+          "conjunction",
+          "opposition",
+          "trine"
+        ],
+        "orbs": {
+          "conjunction": 8.0,
+          "opposition": 8.0,
+          "trine": 7.0,
+          "square": 7.0,
+          "sextile": 5.0
+        },
+        "luminary_orb_bonus": 2.0
+      }
+    },
+    "angles": {
+      "ascendant": {
+        "longitude": 160.24557,
+        "sign": "Virgo",
+        "sign_index": 5,
+        "degree_in_sign": 10.24557,
+        "position": "10°14'44\" Virgo",
+        "element": "earth",
+        "modality": "mutable"
+      },
+      "midheaven": {
+        "longitude": 64.783203,
+        "sign": "Gemini",
+        "sign_index": 2,
+        "degree_in_sign": 4.783203,
+        "position": "4°47'00\" Gemini",
+        "element": "air",
+        "modality": "mutable"
+      },
+      "descendant": {
+        "longitude": 340.24557,
+        "sign": "Pisces",
+        "sign_index": 11,
+        "degree_in_sign": 10.24557,
+        "position": "10°14'44\" Pisces",
+        "element": "water",
+        "modality": "mutable"
+      },
+      "imum_coeli": {
+        "longitude": 244.783203,
+        "sign": "Sagittarius",
+        "sign_index": 8,
+        "degree_in_sign": 4.783203,
+        "position": "4°47'00\" Sagittarius",
+        "element": "fire",
+        "modality": "mutable"
+      }
+    },
+    "houses": [
+      {
+        "house": 1,
+        "cusp": 160.24557,
+        "sign": "Virgo",
+        "sign_index": 5,
+        "degree_in_sign": 10.24557,
+        "position": "10°14'44\" Virgo",
+        "element": "earth",
+        "modality": "mutable"
+      },
+      {
+        "house": 2,
+        "cusp": 182.316905,
+        "sign": "Libra",
+        "sign_index": 6,
+        "degree_in_sign": 2.316905,
+        "position": "2°19'01\" Libra",
+        "element": "air",
+        "modality": "cardinal"
+      },
+      {
+        "house": 3,
+        "cusp": 210.401537,
+        "sign": "Scorpio",
+        "sign_index": 7,
+        "degree_in_sign": 0.401537,
+        "position": "0°24'06\" Scorpio",
+        "element": "water",
+        "modality": "fixed"
+      }
+    ],
+    "sidereal_time": {
+      "armc_deg": 62.829109,
+      "true_obliquity_deg": 23.442164
+    },
+    "points": [
+      {
+        "point": "sun",
+        "name": "Sun",
+        "longitude": 54.416197,
+        "sign": "Taurus",
+        "sign_index": 1,
+        "degree_in_sign": 24.416197,
+        "position": "24°24'58\" Taurus",
+        "element": "earth",
+        "modality": "fixed",
+        "latitude": -1.9e-05,
+        "speed_longitude": 0.964154,
+        "retrograde": false,
+        "distance_au": 1.010905,
+        "house": 9
+      },
+      {
+        "point": "moon",
+        "name": "Moon",
+        "longitude": 297.419463,
+        "sign": "Capricorn",
+        "sign_index": 9,
+        "degree_in_sign": 27.419463,
+        "position": "27°25'10\" Capricorn",
+        "element": "earth",
+        "modality": "cardinal",
+        "latitude": -1.124087,
+        "speed_longitude": 12.360083,
+        "retrograde": false,
+        "distance_au": 0.002643,
+        "house": 5
+      },
+      {
+        "point": "mercury",
+        "name": "Mercury",
+        "longitude": 38.009973,
+        "sign": "Taurus",
+        "sign_index": 1,
+        "degree_in_sign": 8.009973,
+        "position": "8°00'36\" Taurus",
+        "element": "earth",
+        "modality": "fixed",
+        "latitude": -2.523528,
+        "speed_longitude": -0.118848,
+        "retrograde": true,
+        "distance_au": 0.602159,
+        "house": 9
+      }
+    ],
+    "aspects": [
+      {
+        "point_a": "jupiter",
+        "point_b": "uranus",
+        "aspect": "opposition",
+        "angle": 180.0,
+        "orb": 0.362323,
+        "orb_allowed": 8.0,
+        "exactness_pct": 95.5,
+        "state": "separating"
+      },
+      {
+        "point_a": "jupiter",
+        "point_b": "ascendant",
+        "aspect": "sextile",
+        "angle": 60.0,
+        "orb": 0.699881,
+        "orb_allowed": 5.0,
+        "exactness_pct": 86.0
+      },
+      {
+        "point_a": "sun",
+        "point_b": "saturn",
+        "aspect": "trine",
+        "angle": 120.0,
+        "orb": 0.832861,
+        "orb_allowed": 9.0,
+        "exactness_pct": 90.7,
+        "state": "applying"
+      }
+    ],
+    "summary": {
+      "sun_sign": "Taurus",
+      "moon_sign": "Capricorn",
+      "rising_sign": "Virgo",
+      "element_balance": {
+        "earth": 6,
+        "fire": 1,
+        "water": 3
+      },
+      "modality_balance": {
+        "fixed": 3,
+        "cardinal": 6,
+        "mutable": 1
+      },
+      "retrograde_planets": [
+        "mercury",
+        "saturn",
+        "uranus"
+      ],
+      "chart_ruler": {
+        "traditional": "Mercury",
+        "modern": "Mercury"
+      },
+      "sect": "day",
+      "part_of_fortune": {
+        "longitude": 43.248836,
+        "sign": "Taurus",
+        "sign_index": 1,
+        "degree_in_sign": 13.248836,
+        "position": "13°14'56\" Taurus",
+        "element": "earth",
+        "modality": "fixed",
+        "formula": "ASC + Moon - Sun (day) / ASC + Sun - Moon (night)"
+      }
+    }
+  },
+  "meta": {
+    "engine": "astro-agents/1.0.0",
+    "ephemeris": "NASA/JPL DE440 (1800-01-01..2200-01-01)",
+    "astronomy_library": "skyfield/1.55",
+    "frame": "geocentric apparent positions, true ecliptic and equinox of date (IAU 2006/2000A)",
+    "deterministic": true,
+    "llm_used": false,
+    "input_sha256": "bfef1219bc6db2225ab6fd459d5c15b6d448ee730cad073399b878047d800c65",
+    "result_sha256": "be1fb244a2d60d64f2996cbccab5d7603af0c17e9127b5cb558c58e72f56adfe",
+    "reproducibility": "result_sha256 = SHA-256 of the result serialized as JSON with sorted keys, no whitespace, UTF-8, floats rounded to 6 decimals. Same input + same engine version => same hash."
+  },
+  "example_note": "real output of engine 1.0.0; lists shortened to 3 items"
+}
