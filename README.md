@@ -62,6 +62,12 @@ curl -X POST https://astro-agents-api.vercel.app/v1/western/natal \
 
 Real responses: [examples/natal_chart_response.json](examples/natal_chart_response.json) and [examples/kundli_response.json](examples/kundli_response.json) (lists shortened).
 
+## Support and policies
+
+- Contact: aidatatools@proton.me
+- [Support](https://astro-agents-api.vercel.app/support) · [Privacy Policy](https://astro-agents-api.vercel.app/privacy) · [Terms of Service](https://astro-agents-api.vercel.app/terms)
+- Ownership of the origin is proven by an EIP-191 signature from the Base payout address (`x-discovery.ownershipProofs` in `/openapi.json`).
+
 ## About this repository
 
 This repository documents the hosted service and carries its MCP registry manifest (`server.json`). The engine itself runs at the endpoint above.

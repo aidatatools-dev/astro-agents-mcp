@@ -3,7 +3,7 @@
   "name": "io.github.aidatatools-dev/astro-agents",
   "title": "Astro Agents - deterministic Western + Vedic astrology",
   "description": "Natal charts, transits, kundli, dashas, panchang, Gun Milan. JPL DE440, no LLM, hashed.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://astro-agents-api.vercel.app/llms.txt",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
@@ -47,6 +47,12 @@
         "full": "https://astro-agents-api.vercel.app/llms-full.txt",
         "openapi": "https://astro-agents-api.vercel.app/openapi.json",
         "catalog": "https://astro-agents-api.vercel.app/v1/catalog"
+      },
+      "support": {
+        "email": "aidatatools@proton.me",
+        "page": "https://astro-agents-api.vercel.app/support",
+        "privacy": "https://astro-agents-api.vercel.app/privacy",
+        "terms": "https://astro-agents-api.vercel.app/terms"
       }
     }
   }
