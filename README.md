@@ -14,6 +14,7 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 - computes positions from **NASA/JPL DE440**, geocentric apparent, true equinox of date (IAU 2006/2000A);
 - is **deterministic, with no LLM**: the same input gives the same bytes. Every response carries `meta.input_sha256` and `meta.result_sha256`, and `verify_result_hash` or `POST /v1/verify` recomputes them;
 - **states every convention** in the response: ayanamsa (name and value), house system, orbs, node type, dasha year length, dosha and koota rules;
+- returns **typed, structured results**: every MCP tool declares an `outputSchema` for its `structuredContent`;
 - is **cross-validated** against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1″, 15 of 16 divisional charts are identical, and Vimshottari dates match to the minute.
 
 ## Tools
@@ -38,7 +39,7 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 
 **Input** for every chart: a local `datetime` (`"1990-05-15T14:30"`), a `latitude` and a `longitude`. The time zone is resolved for you.
 
-**Payment:** the first 3 calls are free. After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo). There is no account and no API key. A request with invalid input returns a 400 and is never charged.
+**Payment:** each client gets 3 free calls: on any tool over MCP, or on the five $0.01–0.02 routes over REST (every other REST route is always paid). After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). There is no account and no API key. Over MCP, a tool with no free call left returns the paid REST endpoint and its price; nothing is ever charged over MCP. A request with invalid input returns a 400 and is never charged.
 
 ## Connect
 
@@ -50,6 +51,13 @@ Any MCP client that supports remote Streamable HTTP servers:
     "astro-agents": { "url": "https://astro-agent.dev/mcp" }
   }
 }
+```
+
+**Hermes Agent** (Nous Research):
+
+```bash
+hermes mcp add astro-agents --url https://astro-agent.dev/mcp   # answer "n" to the authentication prompt
+hermes skills install https://astro-agent.dev/skills/astro-agents/SKILL.md   # optional: when and how to use the tools
 ```
 
 REST:

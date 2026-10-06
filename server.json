@@ -3,7 +3,7 @@
   "name": "io.github.aidatatools-dev/astro-agents",
   "title": "Astro Agents - deterministic Western + Vedic astrology",
   "description": "Natal charts, transits, kundli, dashas, panchang, Gun Milan. JPL DE440, no LLM, hashed.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "websiteUrl": "https://astro-agent.dev/llms.txt",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
@@ -19,20 +19,20 @@
     "io.modelcontextprotocol.registry/publisher-provided": {
       "positioning": "Deterministic Western + Vedic astrology API for AI agents: JPL DE440 ephemeris, no LLM, reproducible SHA-256 hashes.",
       "tools": {
-        "resolve_birth_time": "Local birth time + place -> exact UT, historical UTC offset, Delta T, Local Mean Time, true solar time. ($0.01 over REST; first 3 calls free)",
-        "planet_positions": "Tropical (or sidereal) longitudes, latitudes, speeds and retrograde flags of Sun..Pluto, nodes, Lilith. ($0.01 over REST; first 3 calls free)",
-        "aspects": "Aspects (with orb, exactness, applying/separating) for a moment, or for any longitudes you supply. ($0.02 over REST; first 3 calls free)",
-        "natal_chart": "Complete natal chart: planets in signs and houses, ascendant, MC, 11 house systems, aspects, summary. ($0.06 over REST; first 3 calls free)",
-        "transits": "Transits to a natal chart at a moment, and exact hit times over a window of up to a year. ($0.08 over REST; first 3 calls free)",
-        "synastry": "Relationship comparison: cross-aspects, house overlays both ways, composite midpoints. ($0.12 over REST; first 3 calls free)",
-        "nakshatras": "Sidereal nakshatra, pada and lord of every graha; janma nakshatra with gana, yoni, nadi, varna. ($0.02 over REST; first 3 calls free)",
-        "panchang": "Tithi, vara, nakshatra, yoga, karana with the exact time each ends, plus sunrise and sunset. ($0.02 over REST; first 3 calls free)",
-        "kundli": "Sidereal D1 + D9: lagna, 9 grahas with rashi, nakshatra, pada, house, dignity, combustion, bhavas. ($0.15 over REST; first 3 calls free)",
-        "kundli_full": "The kundli plus all Shodashavarga divisional charts D1..D60 (Parashara rules). ($0.32 over REST; first 3 calls free)",
-        "vimshottari_dasha": "Vimshottari maha/antar/pratyantar periods with exact dates, birth balance, and the running periods. ($0.10 over REST; first 3 calls free)",
-        "doshas": "Manglik (Kuja), Kaal Sarp and Sade Sati / Dhaiya, each with the exact rule applied and dates. ($0.15 over REST; first 3 calls free)",
-        "gun_milan": "36-point Ashtakoota marriage compatibility: all 8 kootas with reasons, doshas and Manglik check. ($0.25 over REST; first 3 calls free)",
-        "vedic_report": "Kundli + Vimshottari dashas + doshas + janma panchang in one call. ($0.50 over REST; first 3 calls free)"
+        "resolve_birth_time": "Astrology birth time to UTC conversion: convert a local birth date, time and place into exact Universal Time, with the historical time zone and UTC offset, Delta T, Local Mean Time and true solar time. ($0.01 over REST; first 3 calls free over MCP)",
+        "planet_positions": "Western astrology planet positions: the zodiac sign, longitude, latitude, speed and retrograde flag of the Sun, Moon, planets, lunar nodes and Lilith at any moment. ($0.01 over REST; first 3 calls free over MCP)",
+        "aspects": "Western astrology aspects: find the aspects between planets at a moment, or between longitudes you supply, with orb, exactness and applying or separating. ($0.02 over REST; first 3 calls free over MCP)",
+        "natal_chart": "Western astrology natal chart (birth chart, horoscope): planets in zodiac signs and houses, sun sign, moon sign and rising sign (ascendant), MC, aspects and a summary. ($0.06 over REST; first 3 calls free over MCP)",
+        "transits": "Western astrology transits: the transits to a natal chart at a moment, and the exact dates transiting aspects perfect over a window of up to a year. ($0.08 over REST; first 3 calls free over MCP)",
+        "synastry": "Western astrology synastry (relationship compatibility): compare two birth charts with cross-aspects, house overlays both ways and composite midpoints. ($0.12 over REST; first 3 calls free over MCP)",
+        "nakshatras": "Vedic astrology nakshatras: the sidereal nakshatra, pada and lord of every graha, plus the janma nakshatra with gana, yoni, nadi and varna. ($0.02 over REST; first 3 calls free over MCP)",
+        "panchang": "Vedic astrology panchang (Hindu calendar) for a day and place: tithi, vara, nakshatra, yoga and karana with their exact end times, plus sunrise and sunset. ($0.02 over REST; first 3 calls free over MCP)",
+        "kundli": "Vedic astrology birth chart (kundli, Jyotish horoscope, D1 and D9): lagna and the nine grahas with rashi, nakshatra, pada, house, dignity and combustion. ($0.15 over REST; first 3 calls free over MCP)",
+        "kundli_full": "Vedic astrology full kundli: all 16 Shodashavarga divisional charts, D1 to D60 (navamsa, dasamsa...), by Parashara's rules. ($0.32 over REST; first 3 calls free over MCP)",
+        "vimshottari_dasha": "Vedic astrology dasha periods: the Vimshottari maha, antar and pratyantar dashas with exact dates, the balance at birth and the periods running now. ($0.10 over REST; first 3 calls free over MCP)",
+        "doshas": "Vedic astrology doshas: check Manglik (Kuja), Kaal Sarp and Sade Sati / Dhaiya, each with the rule applied and the relevant dates. ($0.15 over REST; first 3 calls free over MCP)",
+        "gun_milan": "Vedic astrology kundli matching (horoscope matching, marriage compatibility): 36-point Ashtakoota Gun Milan with all 8 kootas and reasons, plus dosha and Manglik checks. ($0.25 over REST; first 3 calls free over MCP)",
+        "vedic_report": "Vedic astrology report in one call: kundli, Vimshottari dashas, doshas and the birth panchang. ($0.50 over REST; first 3 calls free over MCP)"
       },
       "trust": [
         "Positions from NASA/JPL DE440 (NASA/JPL), 1800-01-01..2200-01-01, via Skyfield: geocentric apparent, true equinox of date, IAU 2006/2000A.",
@@ -41,7 +41,7 @@
         "Every convention is in the response: ayanamsa (name, true and mean value), house system, orbs, node type, dasha year length, dosha and koota rule sets.",
         "Cross-validated against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1\", 15/16 divisional charts identically, all 11 house systems in structure."
       ],
-      "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo). No account, no API key. First 3 calls free per caller (x402 Sign-In-With-X).",
+      "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). No account, no API key. First 3 calls free per client on the five $0.01-0.02 routes (any tool over MCP); every other route is always paid.",
       "docs": {
         "summary": "https://astro-agent.dev/llms.txt",
         "full": "https://astro-agent.dev/llms-full.txt",
