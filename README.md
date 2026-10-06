@@ -57,8 +57,16 @@ Any MCP client that supports remote Streamable HTTP servers:
 
 ```bash
 hermes mcp add astro-agents --url https://astro-agent.dev/mcp   # answer "n" to the authentication prompt
-hermes skills install https://astro-agent.dev/skills/astro-agents/SKILL.md   # optional: when and how to use the tools
+hermes skills install aidatatools-dev/astro-agents-mcp/skills/astrology   # optional: when and how to use the tools
 ```
+
+**Any agent that reads [Agent Skills](https://agentskills.io)** (Claude Code, Codex, Cursor and others):
+
+```bash
+npx skills add aidatatools-dev/astro-agents-mcp
+```
+
+The skill lives in [`skills/astrology/SKILL.md`](skills/astrology/SKILL.md).
 
 REST:
 
