@@ -17,22 +17,37 @@
   ],
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
-      "positioning": "Deterministic Western + Vedic astrology API for AI agents: JPL DE440 ephemeris, no LLM, reproducible SHA-256 hashes.",
       "tools": {
-        "resolve_birth_time": "Astrology birth time to UTC conversion: convert a local birth date, time and place into exact Universal Time, with the historical time zone and UTC offset, Delta T, Local Mean Time and true solar time. ($0.01 over REST; first 3 calls free over MCP)",
-        "planet_positions": "Western astrology planet positions: the zodiac sign, longitude, latitude, speed and retrograde flag of the Sun, Moon, planets, lunar nodes and Lilith at any moment. ($0.01 over REST; first 3 calls free over MCP)",
-        "aspects": "Western astrology aspects: find the aspects between planets at a moment, or between longitudes you supply, with orb, exactness and applying or separating. ($0.02 over REST; first 3 calls free over MCP)",
-        "natal_chart": "Western astrology natal chart (birth chart, horoscope): planets in zodiac signs and houses, sun sign, moon sign and rising sign (ascendant), MC, aspects and a summary. ($0.06 over REST; first 3 calls free over MCP)",
-        "transits": "Western astrology transits: the transits to a natal chart at a moment, and the exact dates transiting aspects perfect over a window of up to a year. ($0.08 over REST; first 3 calls free over MCP)",
-        "synastry": "Western astrology synastry (relationship compatibility): compare two birth charts with cross-aspects, house overlays both ways and composite midpoints. ($0.12 over REST; first 3 calls free over MCP)",
-        "nakshatras": "Vedic astrology nakshatras: the sidereal nakshatra, pada and lord of every graha, plus the janma nakshatra with gana, yoni, nadi and varna. ($0.02 over REST; first 3 calls free over MCP)",
-        "panchang": "Vedic astrology panchang (Hindu calendar) for a day and place: tithi, vara, nakshatra, yoga and karana with their exact end times, plus sunrise and sunset. ($0.02 over REST; first 3 calls free over MCP)",
-        "kundli": "Vedic astrology birth chart (kundli, Jyotish horoscope, D1 and D9): lagna and the nine grahas with rashi, nakshatra, pada, house, dignity and combustion. ($0.15 over REST; first 3 calls free over MCP)",
-        "kundli_full": "Vedic astrology full kundli: all 16 Shodashavarga divisional charts, D1 to D60 (navamsa, dasamsa...), by Parashara's rules. ($0.32 over REST; first 3 calls free over MCP)",
-        "vimshottari_dasha": "Vedic astrology dasha periods: the Vimshottari maha, antar and pratyantar dashas with exact dates, the balance at birth and the periods running now. ($0.10 over REST; first 3 calls free over MCP)",
-        "doshas": "Vedic astrology doshas: check Manglik (Kuja), Kaal Sarp and Sade Sati / Dhaiya, each with the rule applied and the relevant dates. ($0.15 over REST; first 3 calls free over MCP)",
-        "gun_milan": "Vedic astrology kundli matching (horoscope matching, marriage compatibility): 36-point Ashtakoota Gun Milan with all 8 kootas and reasons, plus dosha and Manglik checks. ($0.25 over REST; first 3 calls free over MCP)",
-        "vedic_report": "Vedic astrology report in one call: kundli, Vimshottari dashas, doshas and the birth panchang. ($0.50 over REST; first 3 calls free over MCP)"
+        "resolve_birth_time": "Astrology birth time to UTC conversion: convert a local birth date, time and place into exact Universal Time, with the historical time zone and UTC offset, Delta T, Local Mean Time and true solar time.",
+        "planet_positions": "Western astrology planet positions: the zodiac sign, longitude, latitude, speed and retrograde flag of the Sun, Moon, planets, lunar nodes and Lilith at any moment.",
+        "aspects": "Western astrology aspects: find the aspects between planets at a moment, or between longitudes you supply, with orb, exactness and applying or separating.",
+        "natal_chart": "Western astrology natal chart (birth chart, horoscope): planets in zodiac signs and houses, sun sign, moon sign and rising sign (ascendant), MC, aspects and a summary.",
+        "transits": "Western astrology transits: the transits to a natal chart at a moment, and the exact dates transiting aspects perfect over a window of up to a year.",
+        "synastry": "Western astrology synastry (relationship compatibility): compare two birth charts with cross-aspects, house overlays both ways and composite midpoints.",
+        "nakshatras": "Vedic astrology nakshatras: the sidereal nakshatra, pada and lord of every graha, plus the janma nakshatra with gana, yoni, nadi and varna.",
+        "panchang": "Vedic astrology panchang (Hindu calendar) for a day and place: tithi, vara, nakshatra, yoga and karana with their exact end times, plus sunrise and sunset.",
+        "kundli": "Vedic astrology birth chart (kundli, Jyotish horoscope, D1 and D9): lagna and the nine grahas with rashi, nakshatra, pada, house, dignity and combustion.",
+        "kundli_full": "Vedic astrology full kundli: all 16 Shodashavarga divisional charts, D1 to D60 (navamsa, dasamsa...), by Parashara's rules.",
+        "vimshottari_dasha": "Vedic astrology dasha periods: the Vimshottari maha, antar and pratyantar dashas with exact dates, the balance at birth and the periods running now.",
+        "doshas": "Vedic astrology doshas: check Manglik (Kuja), Kaal Sarp and Sade Sati / Dhaiya, each with the rule applied and the relevant dates.",
+        "gun_milan": "Vedic astrology kundli matching (horoscope matching, marriage compatibility): 36-point Ashtakoota Gun Milan with all 8 kootas and reasons, plus dosha and Manglik checks.",
+        "vedic_report": "Vedic astrology report in one call: kundli, Vimshottari dashas, doshas and the birth panchang."
+      },
+      "prices_usd_over_rest": {
+        "resolve_birth_time": "0.01",
+        "planet_positions": "0.01",
+        "aspects": "0.02",
+        "natal_chart": "0.06",
+        "transits": "0.08",
+        "synastry": "0.12",
+        "nakshatras": "0.02",
+        "panchang": "0.02",
+        "kundli": "0.15",
+        "kundli_full": "0.32",
+        "vimshottari_dasha": "0.10",
+        "doshas": "0.15",
+        "gun_milan": "0.25",
+        "vedic_report": "0.50"
       },
       "trust": [
         "Positions from NASA/JPL DE440 (NASA/JPL), 1800-01-01..2200-01-01, via Skyfield: geocentric apparent, true equinox of date, IAU 2006/2000A.",
@@ -50,9 +65,7 @@
       },
       "support": {
         "email": "aidatatools@proton.me",
-        "page": "https://astro-agent.dev/support",
-        "privacy": "https://astro-agent.dev/privacy",
-        "terms": "https://astro-agent.dev/terms"
+        "page": "https://astro-agent.dev/support"
       }
     }
   }
