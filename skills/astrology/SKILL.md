@@ -4,9 +4,11 @@ description: "Western and Vedic astrology: birth chart, horoscope, kundli"
 version: 1.1.0
 author: Astro Agents
 license: MIT
+compatibility: Requires the Astro Agents MCP server (https://astro-agent.dev/mcp, Streamable HTTP, no account or API key).
+tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, mcp]
 metadata:
-  hermes:
-    tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, mcp]
+  author: Astro Agents
+  version: "1.1.0"
 ---
 
 # Astrology: exact charts from the Astro Agents MCP server
