@@ -56,6 +56,12 @@ Any MCP client that supports remote Streamable HTTP servers:
 **Hermes Agent** (Nous Research):
 
 ```bash
+hermes plugins install aidatatools-dev/astro-agents-mcp --enable   # MCP server + astrology skill
+```
+
+Without `--enable` Hermes installs the plugin disabled; `hermes plugins enable astro-agents` turns it on. Or by hand:
+
+```bash
 hermes mcp add astro-agents --url https://astro-agent.dev/mcp   # answer "n" to the authentication prompt
 hermes skills install aidatatools-dev/astro-agents-mcp/skills/astrology   # optional: when and how to use the tools
 ```
