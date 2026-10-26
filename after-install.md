@@ -1,4 +1,4 @@
-Astro Agents brings 16 astrology tools from https://astro-agent.dev/mcp (no account, no API key) and the
+Astro Agents brings 18 astrology tools from https://astro-agent.dev/mcp (no account, no API key) and the
 `astrology` skill (listed under the plugin's namespace, e.g. `astro-agents:astrology`). Hermes loads plugins only once they are enabled: if the line below says
 "installed but not enabled", run `hermes plugins enable astro-agents`. Then start a new session and ask for a birth
 chart, a horoscope, a kundli or a panchang with a local date, time and place.

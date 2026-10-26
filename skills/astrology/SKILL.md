@@ -1,14 +1,14 @@
 ---
 name: astrology
 description: "Western and Vedic astrology: birth chart, horoscope, kundli"
-version: 1.1.0
+version: 1.2.0
 author: Astro Agents
 license: MIT
 compatibility: Requires the Astro Agents MCP server (https://astro-agent.dev/mcp, Streamable HTTP, no account or API key).
-tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, mcp]
+tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, yoga, kp-astrology, mcp]
 metadata:
   author: Astro Agents
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Astrology: exact charts from the Astro Agents MCP server
@@ -24,7 +24,8 @@ Load this skill whenever a request depends on where the planets were or are:
 - Western: birth chart / natal chart, horoscope, sun, moon and rising sign, planet positions, aspects, transits,
   relationship compatibility (synastry).
 - Vedic (Jyotish): kundli, divisional charts (navamsa D9 to D60), nakshatra, Vimshottari dasha, Manglik / Kaal Sarp /
-  Sade Sati doshas, panchang (tithi, yoga, karana), kundli matching (Ashtakoota Gun Milan).
+  Sade Sati doshas, yogas (Raja, Dhana, Gaja-Kesari...), panchang (tithi, yoga, karana), kundli matching
+  (Ashtakoota Gun Milan), KP (Krishnamurti Paddhati) sub-lords and significators.
 
 Never compute these yourself. Time zones, historical daylight saving, sidereal time and the ayanamsa are where
 models get charts wrong; the tools resolve them.
@@ -37,7 +38,7 @@ Connect the MCP server once (no account, no API key). Check with `hermes mcp lis
 hermes mcp add astro-agents --url https://astro-agent.dev/mcp
 ```
 
-Answer **n** to "Does this server require authentication?", enable all 16 tools, then start a new session.
+Answer **n** to "Does this server require authentication?", enable all 18 tools, then start a new session.
 Equivalent `~/.hermes/config.yaml` entry:
 
 ```yaml
@@ -59,6 +60,8 @@ mcp_servers:
 | All 16 divisional charts (D1 to D60) | `kundli_full` |
 | Vimshottari dasha periods | `vimshottari_dasha` |
 | Manglik, Kaal Sarp, Sade Sati | `doshas` |
+| Yogas present in a chart (Raja, Dhana, Gaja-Kesari, Pancha Mahapurusha...), rule by rule | `yogas` |
+| KP (Krishnamurti): star, sub and sub-sub lords, cuspal sub-lords, significators | `kp_chart` |
 | Panchang for a day and place | `panchang` |
 | Nakshatra and pada of each graha | `nakshatras` |
 | Kundli matching for marriage (36 points) | `gun_milan` |
@@ -92,7 +95,8 @@ with `tool_call`.
 - **Coordinate signs.** West longitudes and south latitudes are negative.
 - **Ambiguous local times.** During a daylight-saving fall-back hour, pass `ambiguous_time: "earlier"` or `"later"`.
 - **Tropical vs sidereal.** Western tools default to the tropical zodiac; Vedic tools are sidereal (Lahiri
-  ayanamsa by default). Do not mix signs from the two systems in one answer.
+  ayanamsa by default; `kp_chart` uses the KP ayanamsa and Placidus cusps). Do not mix signs from the two
+  systems in one answer.
 
 ## Verification
 

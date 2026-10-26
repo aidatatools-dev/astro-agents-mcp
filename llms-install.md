@@ -25,7 +25,7 @@ Add this entry to `cline_mcp_settings.json` (Cline → MCP Servers → Configure
 
 ## Check that it works
 
-1. The server should list 16 tools, including `natal_chart`, `kundli`, `panchang` and `astro_catalog`.
+1. The server should list 18 tools, including `natal_chart`, `kundli`, `panchang` and `astro_catalog`.
 2. Call `astro_catalog`. It is free and lists every tool with its price and an example request.
 3. Call `natal_chart` with `{"datetime": "1990-05-15T14:30", "latitude": 48.8566, "longitude": 2.3522}`. You should get Sun Taurus, Moon Capricorn, Virgo rising.
 

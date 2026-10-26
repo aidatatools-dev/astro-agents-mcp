@@ -30,8 +30,10 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 | `transits` | transits to a natal chart + exact UTC hit times over up to a year | $0.08 |
 | `synastry` | cross-aspects, house overlays, composite midpoints | $0.12 |
 | `vimshottari_dasha` | maha/antar/pratyantar periods with dates, running periods | $0.10 |
+| `yogas` | Raja, Dhana, Gaja-Kesari, Pancha Mahapurusha, Neecha Bhanga, Kemadruma... each with its rule | $0.10 |
 | `kundli` | sidereal D1 + D9: lagna, grahas, nakshatras, dignities, bhavas | $0.15 |
 | `doshas` | Manglik, Kaal Sarp, Sade Sati / Dhaiya with dates | $0.15 |
+| `kp_chart` | KP: star, sub and sub-sub lords of grahas and Placidus cusps, A/B/C/D significators | $0.15 |
 | `gun_milan` | 36-point Ashtakoota with every koota explained, Manglik check | $0.25 |
 | `kundli_full` | all 16 divisional charts D1..D60 | $0.32 |
 | `vedic_report` | kundli + dashas + doshas + birth panchang | $0.50 |
