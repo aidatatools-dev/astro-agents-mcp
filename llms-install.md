@@ -25,11 +25,12 @@ Add this entry to `cline_mcp_settings.json` (Cline → MCP Servers → Configure
 
 ## Check that it works
 
-1. The server should list 18 tools, including `natal_chart`, `kundli`, `panchang` and `astro_catalog`.
+1. The server should list 18 tools, including `natal_chart`, `kundli`, `panchang`, `kp_chart` (KP sub-lords and significators), `yogas` and `astro_catalog`.
 2. Call `astro_catalog`. It is free and lists every tool with its price and an example request.
 3. Call `natal_chart` with `{"datetime": "1990-05-15T14:30", "latitude": 48.8566, "longitude": 2.3522}`. You should get Sun Taurus, Moon Capricorn, Virgo rising.
 
 ## Notes
 
 - Inputs are the **local** birth date and time plus latitude and longitude. Do not convert to UTC: the server resolves the time zone and its historical offset itself.
+- Positions are benchmarked against NASA/JPL Horizons (within 0.024″ over 1800–2200): https://astro-agent.dev/benchmark.md
 - Each client gets 3 free tool calls. After that a tool returns an error with `payment_required`, which gives the paid REST endpoint, its price and how to pay (x402 or MPP). Nothing is ever charged over MCP.

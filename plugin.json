@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "astro-agents",
-  "version": "1.2.0",
-  "description": "Exact Western and Vedic astrology for agents: birth chart, horoscope, transits, synastry, kundli with D1-D60 divisional charts, Vimshottari dashas, doshas, yogas, KP sub-lords, panchang and Gun Milan, computed from NASA/JPL DE440 with no LLM. Connects the Astro Agents MCP server (no auth) and bundles the astrology skill.",
+  "version": "1.3.0",
+  "description": "Exact Western and Vedic astrology for agents: birth chart, horoscope, transits, synastry, kundli with D1-D60 divisional charts, Vimshottari dashas, doshas, yogas, KP (Krishnamurti) sub-lords, panchang and Gun Milan, computed from NASA/JPL DE440 with no LLM; accuracy verified against NASA/JPL Horizons. Connects the Astro Agents MCP server (no auth) and bundles the astrology skill.",
   "author": {
     "name": "aidatatools-dev",
     "url": "https://astro-agent.dev"

@@ -6,6 +6,16 @@
 - **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)
 - **Docs for agents:** [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI 3.1](https://astro-agent.dev/openapi.json) · [A2A agent card](https://astro-agent.dev/.well-known/agent-card.json)
 
+## What's new in 1.3.0 (2026-10-27)
+
+- **`kp_chart`** ($0.15): KP (Krishnamurti Paddhati), with star, sub and sub-sub lords of every graha and Placidus cusp, cuspal sub-lords and A/B/C/D significators.
+- **`yogas`** ($0.10): deterministic yoga detection (Raja, Dhana, Gaja-Kesari, Pancha Mahapurusha, Neecha Bhanga, Kemadruma, Kaal Sarp…), each with the rule applied.
+- **Accuracy proven against NASA/JPL Horizons:** 12,400 comparisons per measurement over 1800–2200.
+  - Positions agree within **0.024″** (0.0005″ mean).
+  - The longitude as served agrees within **0.062″** over 1962–2026.
+
+  Method and every number: [benchmark.md](https://astro-agent.dev/benchmark.md) · summary at [`/v1/benchmark`](https://astro-agent.dev/v1/benchmark).
+
 ## Why agents call it
 
 Language models routinely get time zones, historical daylight saving, sidereal time and ayanamsa wrong, and one hour of error moves the ascendant by about 15°. Astro Agents:
@@ -15,7 +25,8 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 - is **deterministic, with no LLM**: the same input gives the same bytes. Every response carries `meta.input_sha256` and `meta.result_sha256`, and `verify_result_hash` or `POST /v1/verify` recomputes them;
 - **states every convention** in the response: ayanamsa (name and value), house system, orbs, node type, dasha year length, dosha and koota rules;
 - returns **typed, structured results**: every MCP tool declares an `outputSchema` for its `structuredContent`;
-- is **cross-validated** against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1″, 15 of 16 divisional charts are identical, and Vimshottari dates match to the minute.
+- is **cross-validated** against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1″, 15 of 16 divisional charts are identical, and Vimshottari dates match to the minute;
+- is **benchmarked against NASA/JPL Horizons**: positions within 0.024″ over 1800–2200 ([benchmark](https://astro-agent.dev/benchmark.md)).
 
 ## Tools
 

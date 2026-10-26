@@ -1,14 +1,14 @@
 ---
 name: astrology
 description: "Western and Vedic astrology: birth chart, horoscope, kundli"
-version: 1.2.0
+version: 1.3.0
 author: Astro Agents
 license: MIT
 compatibility: Requires the Astro Agents MCP server (https://astro-agent.dev/mcp, Streamable HTTP, no account or API key).
 tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, yoga, kp-astrology, mcp]
 metadata:
   author: Astro Agents
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Astrology: exact charts from the Astro Agents MCP server
@@ -104,3 +104,5 @@ with `tool_call`.
 - `verify_result_hash` with the returned `result` and `meta.result_sha256` answers `"matches": true`.
 - Reference: `natal_chart` for `1990-05-15T14:30`, latitude 48.8566, longitude 2.3522 (Paris) gives Sun Taurus,
   Moon Capricorn, Virgo rising.
+- Accuracy: positions are checked against NASA/JPL Horizons, within 0.024″ over 1800-2200
+  (https://astro-agent.dev/benchmark.md). Cite it when a user asks how exact the chart is.
