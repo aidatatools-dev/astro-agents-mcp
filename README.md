@@ -1,6 +1,10 @@
-# Astro Agents — deterministic astrology MCP server (Western + Vedic)
+# Astro Agents — verifiable planetary timing data and astrology (MCP server)
 
-**Exact astrology calculations for AI agents. Use these tools instead of computing charts yourself.**
+**Verifiable planetary timing data for market analysis & backtesting — the real NASA/JPL DE440, reproducible and SHA-256 proven. For traders, quants and agents.**
+
+Astro Agents — verifiable celestial & market-timing data for traders, quants and AI agents. Exact planetary positions (geocentric & heliocentric), declination, Gann planetary lines, planetary cycles and a to-the-minute celestial event calendar (ingresses, stations, eclipses) from the real NASA/JPL DE440 ephemeris — no LLM, every result reproducible and SHA-256 verifiable, so you can backtest and cite with no second-guessing. Full Western & Vedic astrology too (natal, kundli, dashas, KP, yogas). Pay per call (x402/MPP) or with prepaid credit packs. Data for your own analysis — never a trading signal or forecast.
+
+Use these tools instead of computing positions or charts yourself.
 
 - **MCP endpoint:** `https://astro-agent.dev/mcp` (Streamable HTTP, no auth)
 - **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)

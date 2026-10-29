@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.aidatatools-dev/astro-agents",
-  "title": "Astro Agents - deterministic astrology and astro-finance data",
-  "description": "Natal, kundli, KP, transits; Gann lines, eclipse calendar for backtests. JPL DE440, hashed.",
+  "title": "Astro Agents - verifiable planetary timing data and astrology",
+  "description": "Verifiable planetary timing data for backtests + astrology. NASA/JPL DE440, SHA-256 proven.",
   "version": "1.5.0",
   "websiteUrl": "https://astro-agent.dev/llms.txt",
   "repository": {
@@ -67,6 +67,7 @@
         "Cross-validated against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1\", 15/16 divisional charts identically, all 11 house systems in structure.",
         "Accuracy vs NASA/JPL Horizons (12,400 comparisons, 1800-2199): positions within 0.024\" (ICRF); ecliptic longitudes as served within 0.062\" over 1962-2026. Method and every number: https://astro-agent.dev/benchmark.md"
       ],
+      "tagline": "Verifiable planetary timing data for market analysis & backtesting — the real NASA/JPL DE440, reproducible and SHA-256 proven. For traders, quants and agents.",
       "finance": "Verifiable, reproducible astro-financial data for backtesting: geocentric and heliocentric positions, declination, Gann planetary lines and a celestial event calendar. The only astro-finance data source that is provable and replayable: every result is SHA-256 hashed.",
       "tags": [
         "finance",

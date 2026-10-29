@@ -1,6 +1,6 @@
 ---
 name: astrology
-description: "Western and Vedic astrology: birth chart, horoscope, kundli"
+description: "Western and Vedic astrology: birth chart, horoscope, kundli, plus verifiable planetary timing data for backtests"
 version: 1.5.0
 author: Astro Agents
 license: MIT
@@ -13,8 +13,10 @@ metadata:
 
 # Astrology: exact charts from the Astro Agents MCP server
 
-Computes astrology charts with the Astro Agents MCP server (https://astro-agent.dev/mcp) instead of estimating
-them. Positions come from the NASA/JPL DE440 ephemeris, no language model is involved, and every result carries
+Computes astrology charts and verifiable planetary timing data (positions, declination, Gann planetary lines, a
+to-the-minute event calendar for market analysis and backtests) with the Astro Agents MCP server
+(https://astro-agent.dev/mcp) instead of estimating them. Data for your own analysis, never a trading signal or
+forecast. Positions come from the NASA/JPL DE440 ephemeris, no language model is involved, and every result carries
 `meta.result_sha256`: the same input always gives the same, checkable output.
 
 ## When to Use
