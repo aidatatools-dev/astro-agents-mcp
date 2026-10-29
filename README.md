@@ -15,7 +15,7 @@ Financial-astrology **data** (never signals) for trading and crypto backtests, v
 - **`sky_today`** ($0.01): the sky now and the next 1–90 days of events, no birth data needed.
 - `planet_positions` gains `options.perspective: "heliocentric"` and `options.coordinates: "equatorial"`; `aspects` gains `options.declination`. Default results and their hashes are unchanged.
 - Guide for bots and backtests: [FINANCE.md](https://github.com/aidatatools-dev/astro-agents/blob/main/FINANCE.md).
-- **1 free call** per client (was 3).
+- **1 free call** per client (was 3), on the $0.01–0.02 tools only; premium and finance tools are always paid.
 
 ## What's new in 1.3.0 (2026-10-27)
 
@@ -66,7 +66,7 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 
 **Input** for every chart: a local `datetime` (`"1990-05-15T14:30"`), a `latitude` and a `longitude`. The time zone is resolved for you.
 
-**Payment:** each client gets 1 free call: on any tool over MCP, or on the $0.01–0.02 routes over REST (every other REST route is always paid). After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). There is no account and no API key. Over MCP, a tool with no free call left returns the paid REST endpoint and its price; nothing is ever charged over MCP. A request with invalid input returns a 400 and is never charged.
+**Payment:** each client gets 1 free call, on the $0.01–0.02 tools only (`resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang`), over MCP or REST. Every other tool, finance included, is always paid. After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). There is no account and no API key. Over MCP, a tool with no free call left returns the paid REST endpoint and its price; nothing is ever charged over MCP. A request with invalid input returns a 400 and is never charged.
 
 ## Connect
 

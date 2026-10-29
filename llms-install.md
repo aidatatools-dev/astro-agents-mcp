@@ -33,4 +33,4 @@ Add this entry to `cline_mcp_settings.json` (Cline → MCP Servers → Configure
 
 - Inputs are the **local** birth date and time plus latitude and longitude. Do not convert to UTC: the server resolves the time zone and its historical offset itself.
 - Positions are benchmarked against NASA/JPL Horizons (within 0.024″ over 1800–2200): https://astro-agent.dev/benchmark.md
-- Each client gets 1 free tool call. After that a tool returns an error with `payment_required`, which gives the paid REST endpoint, its price and how to pay (x402 or MPP). Nothing is ever charged over MCP.
+- Each client gets 1 free call, on the $0.01–0.02 tools only (`resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang`). Every other tool, finance included, is always paid: it returns an error with `payment_required`, which gives the paid REST endpoint, its price and how to pay (x402 or MPP). Nothing is ever charged over MCP.

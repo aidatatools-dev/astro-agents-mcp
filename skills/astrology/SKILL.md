@@ -95,8 +95,10 @@ with `tool_call`.
 
 ## Pitfalls
 
-- **Free calls run out.** Each client gets 1 free tool call (users of Claude's connectors share an hourly pool).
-  After that a tool returns an error with `payment_required`: the REST endpoint, its price ($0.01 to $0.50) and a
+- **Free calls run out, and only cover the cheap tools.** Each client gets 1 free call on `resolve_birth_time`,
+  `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang` (users of Claude's connectors share an
+  hourly pool). Every other tool, finance included, is always paid. A paid tool returns an error with
+  `payment_required`: the REST endpoint, its price ($0.01 to $0.50) and a
   one-line x402 payment example. Tell the user; do not retry the same call, and do not compute the chart yourself.
 - **Coordinate signs.** West longitudes and south latitudes are negative.
 - **Ambiguous local times.** During a daylight-saving fall-back hour, pass `ambiguous_time: "earlier"` or `"later"`.

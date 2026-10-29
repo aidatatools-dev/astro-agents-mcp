@@ -8,5 +8,6 @@ Positions are benchmarked against NASA/JPL Horizons, within 0.024″: https://as
 No `mcp__astro_agents__*` tools in the session? Hermes needs its `mcp` extra (part of the standard install; in a
 source checkout run `uv sync --extra mcp`). `hermes plugins show astro-agents` should say `Status: enabled`.
 
-Each client gets 1 free tool call. After that a tool explains how to pay per call over REST (x402 or MPP);
+Each client gets 1 free call, on the $0.01–0.02 tools only (`resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang`); every other tool,
+finance included, is always paid. A paid tool explains how to pay per call over REST (x402 or MPP);
 nothing is ever charged over MCP. `astro_catalog` is free and lists every tool with its price.
