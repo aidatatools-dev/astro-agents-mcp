@@ -6,6 +6,17 @@
 - **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)
 - **Docs for agents:** [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI 3.1](https://astro-agent.dev/openapi.json) · [A2A agent card](https://astro-agent.dev/.well-known/agent-card.json)
 
+## What's new in 1.5.0 (2026-10-29)
+
+- **Prepaid credit packs** for the REST API: pay once with x402 or MPP, then spend call by call with a token, no signature per call.
+  - Probe: $10 for 10 credits.
+  - Backtest: $50 for 60.
+  - Quant: $200 for 260.
+  - Autopilot: $1000 for 1400.
+- 1 credit = $1. Credits never expire and pay for every paid route.
+- The token is a bearer secret, shown once. If it is lost, a new one can be issued to the owner of the paying wallet.
+- Details: [CREDITS.md](https://github.com/aidatatools-dev/astro-agents/blob/main/CREDITS.md). Over MCP nothing changes: tools work as before.
+
 ## What's new in 1.4.0 (2026-10-29)
 
 Financial-astrology **data** (never signals) for trading and crypto backtests, verifiable and replayable like every other result:

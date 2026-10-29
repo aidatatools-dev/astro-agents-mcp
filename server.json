@@ -3,7 +3,7 @@
   "name": "io.github.aidatatools-dev/astro-agents",
   "title": "Astro Agents - deterministic astrology and astro-finance data",
   "description": "Natal, kundli, KP, transits; Gann lines, eclipse calendar for backtests. JPL DE440, hashed.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "websiteUrl": "https://astro-agent.dev/llms.txt",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
