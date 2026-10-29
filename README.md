@@ -83,6 +83,24 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 
 **Payment:** each client gets 1 free call, on the $0.01–0.02 tools only (`resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang`), over MCP or REST. Every other tool, finance included, is always paid. After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). There is no account and no API key. Over MCP, a tool with no free call left returns the paid REST endpoint and its price; nothing is ever charged over MCP. A request with invalid input returns a 400 and is never charged.
 
+## Python client
+
+For scripts, notebooks and backtests, use the official Python client: it returns pandas DataFrames.
+
+```bash
+pip install astro-agents
+# before the first PyPI release:
+pip install "astro-agents @ git+https://github.com/aidatatools-dev/astro-agents#subdirectory=clients/python"
+```
+
+```python
+from astro_agents import Client
+client = Client()   # ASTRO_CREDITS_TOKEN (prepaid credits), or 1 free call on the $0.01-0.02 routes
+lines = client.planetary_lines(start="2024-01-01", end="2024-12-31", bodies=["jupiter", "saturn"])
+```
+
+The client's docs and examples (a notebook, vectorbt, backtrader, Freqtrade) are in [clients/python](https://github.com/aidatatools-dev/astro-agents/tree/main/clients/python).
+
 ## Connect
 
 Any MCP client that supports remote Streamable HTTP servers:
