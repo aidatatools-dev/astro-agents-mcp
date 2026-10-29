@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.aidatatools-dev/astro-agents",
-  "title": "Astro Agents - deterministic Western + Vedic astrology",
-  "description": "Natal, transits, kundli, KP, yogas, dashas, panchang, Gun Milan. JPL DE440, no LLM, hashed.",
-  "version": "1.3.0",
+  "title": "Astro Agents - deterministic astrology and astro-finance data",
+  "description": "Natal, kundli, KP, transits; Gann lines, eclipse calendar for backtests. JPL DE440, hashed.",
+  "version": "1.4.0",
   "websiteUrl": "https://astro-agent.dev/llms.txt",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
@@ -20,10 +20,13 @@
       "tools": {
         "resolve_birth_time": "Astrology birth time to UTC conversion",
         "planet_positions": "Western astrology planet positions",
+        "sky_today": "Astrology sky today (no birth data)",
         "aspects": "Western astrology aspects",
         "natal_chart": "Western astrology natal chart (birth chart, horoscope)",
         "transits": "Western astrology transits",
         "synastry": "Western astrology synastry (relationship compatibility)",
+        "planetary_lines": "Financial astrology Gann planetary lines",
+        "astro_event_calendar": "Financial astrology event calendar for backtesting and trading bots",
         "nakshatras": "Vedic astrology nakshatras",
         "panchang": "Vedic astrology panchang (Hindu calendar) for a day and place",
         "kundli": "Vedic astrology birth chart (kundli, Jyotish horoscope, D1 and D9)",
@@ -38,10 +41,13 @@
       "prices_usd_over_rest": {
         "resolve_birth_time": "0.01",
         "planet_positions": "0.01",
+        "sky_today": "0.01",
         "aspects": "0.02",
         "natal_chart": "0.06",
         "transits": "0.08",
         "synastry": "0.12",
+        "planetary_lines": "0.20",
+        "astro_event_calendar": "0.25",
         "nakshatras": "0.02",
         "panchang": "0.02",
         "kundli": "0.15",
@@ -61,7 +67,16 @@
         "Cross-validated against an independent engine (XALEN, Apache-2.0): ayanamsas agree to < 0.1\", 15/16 divisional charts identically, all 11 house systems in structure.",
         "Accuracy vs NASA/JPL Horizons (12,400 comparisons, 1800-2199): positions within 0.024\" (ICRF); ecliptic longitudes as served within 0.062\" over 1962-2026. Method and every number: https://astro-agent.dev/benchmark.md"
       ],
-      "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). No account, no API key. First 3 calls free per client on the five $0.01-0.02 routes (any tool over MCP); every other route is always paid.",
+      "finance": "Verifiable, reproducible astro-financial data for backtesting: geocentric and heliocentric positions, declination, Gann planetary lines and a celestial event calendar. The only astro-finance data source that is provable and replayable: every result is SHA-256 hashed.",
+      "tags": [
+        "finance",
+        "trading",
+        "financial-astrology",
+        "gann",
+        "backtesting",
+        "crypto"
+      ],
+      "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). No account, no API key. 1 free call per client on the $0.01-0.02 routes (any tool over MCP); every other route is always paid.",
       "docs": {
         "summary": "https://astro-agent.dev/llms.txt",
         "full": "https://astro-agent.dev/llms-full.txt",

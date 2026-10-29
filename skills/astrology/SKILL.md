@@ -1,14 +1,14 @@
 ---
 name: astrology
 description: "Western and Vedic astrology: birth chart, horoscope, kundli"
-version: 1.3.0
+version: 1.4.0
 author: Astro Agents
 license: MIT
 compatibility: Requires the Astro Agents MCP server (https://astro-agent.dev/mcp, Streamable HTTP, no account or API key).
-tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, yoga, kp-astrology, mcp]
+tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, yoga, kp-astrology, financial-astrology, gann, backtesting, mcp]
 metadata:
   author: Astro Agents
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # Astrology: exact charts from the Astro Agents MCP server
@@ -26,6 +26,9 @@ Load this skill whenever a request depends on where the planets were or are:
 - Vedic (Jyotish): kundli, divisional charts (navamsa D9 to D60), nakshatra, Vimshottari dasha, Manglik / Kaal Sarp /
   Sade Sati doshas, yogas (Raja, Dhana, Gaja-Kesari...), panchang (tithi, yoga, karana), kundli matching
   (Ashtakoota Gun Milan), KP (Krishnamurti Paddhati) sub-lords and significators.
+- Financial astrology data (trading, crypto, backtests): heliocentric positions, declination and parallels, Gann
+  planetary lines with price levels, and a dated calendar of eclipses, stations, ingresses and aspects. Data
+  only: never present it as a trading signal.
 
 Never compute these yourself. Time zones, historical daylight saving, sidereal time and the ayanamsa are where
 models get charts wrong; the tools resolve them.
@@ -38,7 +41,7 @@ Connect the MCP server once (no account, no API key). Check with `hermes mcp lis
 hermes mcp add astro-agents --url https://astro-agent.dev/mcp
 ```
 
-Answer **n** to "Does this server require authentication?", enable all 18 tools, then start a new session.
+Answer **n** to "Does this server require authentication?", enable all 21 tools, then start a new session.
 Equivalent `~/.hermes/config.yaml` entry:
 
 ```yaml
@@ -52,7 +55,10 @@ mcp_servers:
 | Question | Tool |
 |---|---|
 | Birth chart, horoscope, sun/moon/rising sign | `natal_chart` |
-| Where the planets are at a moment | `planet_positions` |
+| Where the planets are at a moment (heliocentric, RA/declination with options) | `planet_positions` |
+| The sky now and the next ingresses, stations, lunations | `sky_today` |
+| Gann planetary lines, geo + helio, series and price levels | `planetary_lines` |
+| Eclipses, retrogrades, ingresses, aspects between two dates (1800-2200) | `astro_event_calendar` |
 | Aspects between planets | `aspects` |
 | Transits to a natal chart, exact dates | `transits` |
 | Relationship compatibility (Western) | `synastry` |
@@ -89,7 +95,7 @@ with `tool_call`.
 
 ## Pitfalls
 
-- **Free calls run out.** Each client gets 3 free tool calls (users of Claude's connectors share an hourly pool).
+- **Free calls run out.** Each client gets 1 free tool call (users of Claude's connectors share an hourly pool).
   After that a tool returns an error with `payment_required`: the REST endpoint, its price ($0.01 to $0.50) and a
   one-line x402 payment example. Tell the user; do not retry the same call, and do not compute the chart yourself.
 - **Coordinate signs.** West longitudes and south latitudes are negative.
