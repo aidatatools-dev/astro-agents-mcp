@@ -78,6 +78,9 @@
         "crypto"
       ],
       "payment": "Pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). No account, no API key. 1 free call per client on the $0.01-0.02 routes, over REST, MCP or A2A; every other route, finance included, is always paid.",
+      "sdk": {
+        "python": "pip install \"astro-agents @ git+https://github.com/aidatatools-dev/astro-agents-clients#subdirectory=python\""
+      },
       "docs": {
         "summary": "https://astro-agent.dev/llms.txt",
         "full": "https://astro-agent.dev/llms-full.txt",

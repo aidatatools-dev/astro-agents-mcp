@@ -88,9 +88,7 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 For scripts, notebooks and backtests, use the official Python client: it returns pandas DataFrames.
 
 ```bash
-pip install astro-agents
-# before the first PyPI release:
-pip install "astro-agents @ git+https://github.com/aidatatools-dev/astro-agents-clients#subdirectory=python"
+pip install "astro-agents @ git+https://github.com/aidatatools-dev/astro-agents-clients#subdirectory=python"   # not on PyPI yet
 ```
 
 ```python
