@@ -19,7 +19,7 @@ Use these tools instead of computing positions or charts yourself.
   - Autopilot: $1000 for 1400.
 - 1 credit = $1. Credits never expire and pay for every paid route.
 - The token is a bearer secret, shown once. If it is lost, a new one can be issued to the owner of the paying wallet.
-- Details: [CREDITS.md](https://github.com/aidatatools-dev/astro-agents/blob/main/CREDITS.md). Over MCP nothing changes: tools work as before.
+- Details: [CREDITS.md](https://github.com/aidatatools-dev/astro-agents-clients/blob/main/docs/CREDITS.md). Over MCP nothing changes: tools work as before.
 
 ## What's new in 1.4.0 (2026-10-29)
 
@@ -29,7 +29,7 @@ Financial-astrology **data** (never signals) for trading and crypto backtests, v
 - **`astro_event_calendar`** ($0.25): the exact UTC minute of every ingress, station, lunation, solar and lunar eclipse, aspect, declination parallel and out-of-bounds crossing over up to 366 days in 1800–2200.
 - **`sky_today`** ($0.01): the sky now and the next 1–90 days of events, no birth data needed.
 - `planet_positions` gains `options.perspective: "heliocentric"` and `options.coordinates: "equatorial"`; `aspects` gains `options.declination`. Default results and their hashes are unchanged.
-- Guide for bots and backtests: [FINANCE.md](https://github.com/aidatatools-dev/astro-agents/blob/main/FINANCE.md).
+- Guide for bots and backtests: [FINANCE.md](https://github.com/aidatatools-dev/astro-agents-clients/blob/main/docs/FINANCE.md).
 - **1 free call** per client (was 3), on the $0.01–0.02 tools only; premium and finance tools are always paid.
 
 ## What's new in 1.3.0 (2026-10-27)
@@ -90,7 +90,7 @@ For scripts, notebooks and backtests, use the official Python client: it returns
 ```bash
 pip install astro-agents
 # before the first PyPI release:
-pip install "astro-agents @ git+https://github.com/aidatatools-dev/astro-agents#subdirectory=clients/python"
+pip install "astro-agents @ git+https://github.com/aidatatools-dev/astro-agents-clients#subdirectory=python"
 ```
 
 ```python
@@ -99,7 +99,7 @@ client = Client()   # ASTRO_CREDITS_TOKEN (prepaid credits), or 1 free call on t
 lines = client.planetary_lines(start="2024-01-01", end="2024-12-31", bodies=["jupiter", "saturn"])
 ```
 
-The client's docs and examples (a notebook, vectorbt, backtrader, Freqtrade) are in [clients/python](https://github.com/aidatatools-dev/astro-agents/tree/main/clients/python).
+The client's docs and examples (a notebook, vectorbt, backtrader, Freqtrade) are in [clients/python](https://github.com/aidatatools-dev/astro-agents-clients/tree/main/python).
 
 ## Connect
 
