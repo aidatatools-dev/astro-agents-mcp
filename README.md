@@ -10,6 +10,17 @@ Use these tools instead of computing positions or charts yourself.
 - **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)
 - **Docs for agents:** [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI 3.1](https://astro-agent.dev/openapi.json) · [A2A agent card](https://astro-agent.dev/.well-known/agent-card.json)
 
+## What's new in 1.7.0 (2026-10-30)
+
+- **Birth-sky analogues:** `sky_analogues` takes `reference: {"birth": {"datetime": "1990-05-15T14:30", "latitude": 48.8566, "longitude": 2.3522}}` to compare a birth sky to past/future dates — data only. Same result and hash as passing those positions by hand (`meta.reference_resolution.equivalent_request`).
+
+## What's new in 1.6.0 (2026-10-29)
+
+- **Sky analogues** (`sky_analogues`, $0.25): the past or future dates whose planetary positions best match a reference sky, ranked by a stated angular distance (formula in every response).
+- For trading bots and agents: [astro-agent.dev/trading-bots](https://astro-agent.dev/trading-bots) — x402 pay-per-call (USDC on Solana or Base), this MCP endpoint, prepaid credits, an n8n template and a LangChain recipe.
+
+Data for your own analysis — never a signal or forecast.
+
 ## What's new in 1.5.0 (2026-10-29)
 
 - **Prepaid credit packs** for the REST API: pay once with x402 or MPP, then spend call by call with a token, no signature per call.

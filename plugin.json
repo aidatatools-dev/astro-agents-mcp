@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "astro-agents",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "description": "Verifiable planetary timing data for market analysis and backtesting (geocentric and heliocentric positions, declination, Gann planetary lines, a to-the-minute event calendar of ingresses, stations and eclipses) plus full Western and Vedic astrology (natal, transits, synastry, kundli D1-D60, dashas, doshas, KP, yogas, panchang, Gun Milan), from NASA/JPL DE440 with no LLM; every result is reproducible and SHA-256 verifiable. Data for your own analysis, never a trading signal. Connects the Astro Agents MCP server (no auth) and bundles the astrology skill.",
   "author": {
     "name": "aidatatools-dev",
