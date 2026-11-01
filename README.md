@@ -10,6 +10,12 @@ Use these tools instead of computing positions or charts yourself.
 - **REST API:** `https://astro-agent.dev/v1/catalog` (free catalog with schemas and examples)
 - **Docs for agents:** [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI 3.1](https://astro-agent.dev/openapi.json) · [A2A agent card](https://astro-agent.dev/.well-known/agent-card.json)
 
+## What's new in 1.8 (2026-10-30 to 2026-11-01, engine 1.8.3)
+
+- **Crypto token launch skies:** `token_chart` ($0.25) returns a token's launch sky and the exact dates ahead when the planets return to or aspect it; `token_synastry` ($0.25) compares two launch skies by geometry, with a `substance` block (tight aspects, confidence) next to the score. Both return an SVG card. Data only.
+- **Pay per call natively over MCP:** an unpaid paid tool returns a standard x402 offer in `structuredContent`; an x402 MCP client pays and retries in `_meta`. Prepaid credits work over MCP too (`X-Credits-Token` header).
+- 1.8.3: the x402 offer is always present, even when a payment facilitator is slow to answer.
+
 ## What's new in 1.7.0 (2026-10-30)
 
 - **Birth-sky analogues:** `sky_analogues` takes `reference: {"birth": {"datetime": "1990-05-15T14:30", "latitude": 48.8566, "longitude": 2.3522}}` to compare a birth sky to past/future dates — data only. Same result and hash as passing those positions by hand (`meta.reference_resolution.equivalent_request`).
@@ -30,7 +36,7 @@ Data for your own analysis — never a signal or forecast.
   - Autopilot: $1000 for 1400.
 - 1 credit = $1. Credits never expire and pay for every paid route.
 - The token is a bearer secret, shown once. If it is lost, a new one can be issued to the owner of the paying wallet.
-- Details: [CREDITS.md](https://github.com/aidatatools-dev/astro-agents-clients/blob/main/docs/CREDITS.md). Over MCP nothing changes: tools work as before.
+- Details: [CREDITS.md](https://github.com/aidatatools-dev/astro-agents-clients/blob/main/docs/CREDITS.md). Since 1.8.0 credits also pay over MCP (`X-Credits-Token` header).
 
 ## What's new in 1.4.0 (2026-10-29)
 
@@ -67,7 +73,7 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 
 ## Tools
 
-| Tool | What it returns | Price over REST |
+| Tool | What it returns | Price |
 |---|---|---|
 | `resolve_birth_time` | exact UT, historical UTC offset, Delta T, Local Mean Time, true solar time | $0.01 |
 | `planet_positions` | Sun..Pluto, nodes, Lilith: longitude, sign, speed, retrograde; heliocentric or RA/declination as options | $0.01 |
@@ -86,13 +92,16 @@ Language models routinely get time zones, historical daylight saving, sidereal t
 | `planetary_lines` | financial astrology: Gann lines geo + helio, Mean of 5, price levels, series for backtests | $0.20 |
 | `gun_milan` | 36-point Ashtakoota with every koota explained, Manglik check | $0.25 |
 | `astro_event_calendar` | financial astrology: eclipses, stations, ingresses, aspects, parallels to the minute, 1800–2200 | $0.25 |
+| `sky_analogues` | past or future dates whose sky best matches a reference sky, by a stated angular distance | $0.25 |
+| `token_chart` | a crypto token's launch sky and the exact dates ahead when planets return to or aspect it, SVG card | $0.25 |
+| `token_synastry` | two launch skies compared: cross-aspects, geometry score and its substance, SVG card | $0.25 |
 | `kundli_full` | all 16 divisional charts D1..D60 | $0.32 |
 | `vedic_report` | kundli + dashas + doshas + birth panchang | $0.50 |
 | `astro_catalog`, `verify_result_hash` | catalog; hash verification | free |
 
 **Input** for every chart: a local `datetime` (`"1990-05-15T14:30"`), a `latitude` and a `longitude`. The time zone is resolved for you.
 
-**Payment:** each client gets 1 free call, on the $0.01–0.02 tools only (`resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras` or `panchang`), over MCP or REST. Every other tool, finance included, is always paid. After that you pay per call over REST with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e). There is no account and no API key. Over MCP, a tool with no free call left returns the paid REST endpoint and its price; nothing is ever charged over MCP. A request with invalid input returns a 400 and is never charged.
+**Payment:** 1 free call per client on the $0.01-0.02 routes only (REST, MCP or A2A): `resolve_birth_time`, `planet_positions`, `sky_today`, `aspects`, `nakshatras`, `panchang`. Every other route, finance included, is always paid. Over MCP a paid tool is paid per call with native **x402**: the unpaid call returns an x402 offer (`x402Version`, `accepts` for USDC on Base or Solana) in `structuredContent`; an x402 MCP client signs one and retries with it in `_meta["x402/payment"]`, and the settlement comes back in `_meta["x402/payment-response"]`. Or with **prepaid credits**: set the HTTP header `X-Credits-Token` in your MCP client configuration and each paid call is deducted from your credits. Over REST you pay per call with **x402** (USDC on Base or Solana) or **MPP** (Tempo: OUSD or USDC.e), or with prepaid credits. There is no account and no API key. A request with invalid input returns an error and is never charged.
 
 ## Python client
 

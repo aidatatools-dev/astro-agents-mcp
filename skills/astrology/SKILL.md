@@ -1,14 +1,14 @@
 ---
 name: astrology
 description: "Western and Vedic astrology: birth chart, horoscope, kundli, plus verifiable planetary timing data for backtests"
-version: 1.5.0
+version: 1.5.1
 author: Astro Agents
 license: MIT
 compatibility: Requires the Astro Agents MCP server (https://astro-agent.dev/mcp, Streamable HTTP, no account or API key).
 tags: [astrology, horoscope, birth-chart, natal-chart, kundli, vedic-astrology, jyotish, panchang, dasha, synastry, transits, zodiac, gun-milan, yoga, kp-astrology, financial-astrology, gann, backtesting, mcp]
 metadata:
   author: Astro Agents
-  version: "1.5.0"
+  version: "1.5.1"
 ---
 
 # Astrology: exact charts from the Astro Agents MCP server
@@ -43,7 +43,7 @@ Connect the MCP server once (no account, no API key). Check with `hermes mcp lis
 hermes mcp add astro-agents --url https://astro-agent.dev/mcp
 ```
 
-Answer **n** to "Does this server require authentication?", enable all 21 tools, then start a new session.
+Answer **n** to "Does this server require authentication?", enable all 24 tools, then start a new session.
 Equivalent `~/.hermes/config.yaml` entry:
 
 ```yaml
