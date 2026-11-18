@@ -1,0 +1,137 @@
+{
+  "tool": "moon_details",
+  "arguments": {
+    "datetime": "2026-01-03T12:00:00Z",
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  },
+  "structuredContent": {
+    "endpoint": "astronomy/moon",
+    "result": {
+      "subject": {
+        "time": {
+          "local_input": "2026-01-03T12:00:00Z",
+          "time_basis": "civil",
+          "timezone": null,
+          "timezone_source": "offset_in_datetime",
+          "utc_offset": "+00:00",
+          "is_dst": null,
+          "utc": "2026-01-03T12:00:00Z",
+          "julian_day_ut": 2461044.000001,
+          "julian_day_tt": 2461044.000801,
+          "delta_t_seconds": 69.11,
+          "time_known": true,
+          "local_mean_time": "2026-01-03T12:09:24",
+          "true_solar_time": "2026-01-03T12:04:55",
+          "equation_of_time_minutes": -4.4903
+        }
+      },
+      "settings": {
+        "conventions": {
+          "frame": "geocentric apparent positions (Earth's centre), true ecliptic and equinox of date",
+          "phase_angle": "Moon's ecliptic longitude minus the Sun's, 0-360 (0 new, 90 first quarter, 180 full, 270 last quarter)",
+          "illuminated_fraction": "from the Sun-Moon-Earth phase angle (Skyfield fraction_illuminated)",
+          "age": "days since the previous new Moon",
+          "lunation": "Brown lunation number (1 = the new Moon of 1923-01-17)",
+          "distance": "Earth's centre to the Moon's centre, km; perigee/apogee = its minima/maxima, to the minute",
+          "local": "with latitude/longitude: topocentric apparent altitude and azimuth (refraction applied), and that local day's moonrise, transit and moonset (astronomy/rise-set conventions)"
+        }
+      },
+      "phase": {
+        "name": "full moon",
+        "phase_angle": 181.1265,
+        "illuminated_fraction": 0.99855,
+        "waxing": false,
+        "age_days": 14.4282,
+        "lunation": 1274
+      },
+      "distance": {
+        "km": 362526.9,
+        "earth_radii": 56.839,
+        "angular_diameter_arcmin": 32.951
+      },
+      "position": {
+        "ecliptic_longitude": 104.24223,
+        "ecliptic_latitude": 4.2246
+      },
+      "previous_new_moon": {
+        "utc": "2025-12-20T01:43:21Z",
+        "timestamp": 1766195001
+      },
+      "next_phases": [
+        {
+          "phase": "last_quarter",
+          "utc": "2026-01-10T15:48:24Z",
+          "timestamp": 1768060104
+        },
+        {
+          "phase": "new_moon",
+          "utc": "2026-01-18T19:51:59Z",
+          "timestamp": 1768765919
+        },
+        {
+          "phase": "first_quarter",
+          "utc": "2026-01-26T04:47:23Z",
+          "timestamp": 1769402843
+        },
+        {
+          "phase": "full_moon",
+          "utc": "2026-02-01T22:09:15Z",
+          "timestamp": 1769983755
+        }
+      ],
+      "next_perigee": {
+        "utc": "2026-01-29T21:54:25Z",
+        "timestamp": 1769723665,
+        "distance_km": 365894.2
+      },
+      "next_apogee": {
+        "utc": "2026-01-13T20:52:49Z",
+        "timestamp": 1768337569,
+        "distance_km": 405404.8
+      },
+      "local": {
+        "location": {
+          "latitude": 48.8566,
+          "longitude": 2.3522,
+          "elevation_m": 0.0
+        },
+        "timezone": "Europe/Paris",
+        "timezone_source": "resolved_from_coordinates",
+        "date": "2026-01-03",
+        "window_utc": {
+          "start": "2026-01-02T23:00:00Z",
+          "end": "2026-01-03T23:00:00Z"
+        },
+        "altitude": -15.2352,
+        "azimuth": 359.5519,
+        "above_horizon": false,
+        "rise": {
+          "utc": "2026-01-03T15:54:19Z",
+          "local": "2026-01-03T16:54:19+01:00",
+          "timestamp": 1767455659,
+          "azimuth": 47.61
+        },
+        "transit": {
+          "utc": "2026-01-02T23:29:18Z",
+          "local": "2026-01-03T00:29:18+01:00",
+          "timestamp": 1767396558,
+          "altitude": 68.62
+        },
+        "set": {
+          "utc": "2026-01-03T08:15:08Z",
+          "local": "2026-01-03T09:15:08+01:00",
+          "timestamp": 1767428108,
+          "azimuth": 313.78
+        },
+        "state": "rises_and_sets"
+      }
+    },
+    "meta": {
+      "engine": "astro-agents/1.9.0",
+      "ephemeris": "NASA/JPL DE440 (1800-01-01..2200-01-01)",
+      "input_sha256": "69b8e65162f19afcb232b237ad6470752ad2a70a1c6c527df63a483a6512e236",
+      "result_sha256": "c3974e1638d920379948c5e3f995bcf1558b5604e4966ba0dd64bb44589c9910"
+    }
+  }
+}

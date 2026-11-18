@@ -1,0 +1,109 @@
+{
+  "tool": "local_eclipse",
+  "arguments": {
+    "start": "2024-04-01",
+    "end": "2024-04-30",
+    "latitude": 32.7767,
+    "longitude": -96.797
+  },
+  "structuredContent": {
+    "endpoint": "astronomy/eclipse-local",
+    "result": {
+      "subject": {
+        "location": {
+          "latitude": 32.7767,
+          "longitude": -96.797,
+          "elevation_m": 0.0
+        },
+        "timezone": "America/Chicago",
+        "timezone_source": "resolved_from_coordinates"
+      },
+      "settings": {
+        "start": "2024-04-01",
+        "end": "2024-04-30",
+        "kinds": [
+          "solar",
+          "lunar"
+        ],
+        "conventions": {
+          "solar": "topocentric apparent discs of the Sun (R = 696,340 km) and the Moon (R = 1,737.4 km, smooth limb); C1/C4: discs touch outside; C2/C3: one disc inside the other; maximum: least separation; magnitude: fraction of the Sun's diameter covered; obscuration: fraction of its area",
+          "lunar": "Earth's shadow enlarged by Danjon's method (Skyfield eclipselib, as the event calendar); P1/P4 penumbra, U1/U4 umbra, U2/U3 total phase: the same instants everywhere; the place gives the Moon's altitude at each contact",
+          "local_type": "solar: total, annular or partial when the Moon's disc reaches the Sun's as seen from the place, none otherwise; this geometry does not check the horizon: see visible",
+          "visible": "the body's upper limb above the horizon (apparent altitude > -0.8333 deg with standard refraction) at one of the contacts or at maximum",
+          "times": "UTC and local time, to the second"
+        }
+      },
+      "eclipses": [
+        {
+          "kind": "solar",
+          "global_type": "total",
+          "greatest_eclipse_utc": "2024-04-08T18:17Z",
+          "key": "eclipse:solar:total:2024-04-08T18:17Z",
+          "local_type": "total",
+          "magnitude": 1.0149,
+          "obscuration": 1.0,
+          "contacts": [
+            {
+              "utc": "2024-04-08T17:23:18Z",
+              "local": "2024-04-08T12:23:18-05:00",
+              "timestamp": 1712596998,
+              "contact": "C1",
+              "sun_altitude": 60.58,
+              "sun_azimuth": 145.32,
+              "sun_above_horizon": true
+            },
+            {
+              "utc": "2024-04-08T18:40:43Z",
+              "local": "2024-04-08T13:40:43-05:00",
+              "timestamp": 1712601643,
+              "contact": "C2",
+              "sun_altitude": 64.68,
+              "sun_azimuth": 186.91,
+              "sun_above_horizon": true
+            },
+            {
+              "utc": "2024-04-08T18:42:39Z",
+              "local": "2024-04-08T13:42:39-05:00",
+              "timestamp": 1712601759,
+              "contact": "MAX",
+              "sun_altitude": 64.62,
+              "sun_azimuth": 188.02,
+              "sun_above_horizon": true
+            },
+            {
+              "utc": "2024-04-08T18:44:35Z",
+              "local": "2024-04-08T13:44:35-05:00",
+              "timestamp": 1712601875,
+              "contact": "C3",
+              "sun_altitude": 64.56,
+              "sun_azimuth": 189.12,
+              "sun_above_horizon": true
+            },
+            {
+              "utc": "2024-04-08T20:02:42Z",
+              "local": "2024-04-08T15:02:42-05:00",
+              "timestamp": 1712606562,
+              "contact": "C4",
+              "sun_altitude": 56.75,
+              "sun_azimuth": 226.04,
+              "sun_above_horizon": true
+            }
+          ],
+          "visible": true,
+          "duration_minutes": 159.39,
+          "central_duration_seconds": 231.3
+        }
+      ],
+      "counts": {
+        "eclipses": 1,
+        "visible": 1
+      }
+    },
+    "meta": {
+      "engine": "astro-agents/1.9.0",
+      "ephemeris": "NASA/JPL DE440 (1800-01-01..2200-01-01)",
+      "input_sha256": "7cf94c46555fac0a5822ea4accedc536ea4beeb7d314c7b496eb5740a6e80469",
+      "result_sha256": "b5912568c815c23d885ee764fb2f2bd37d29c87e47af3af2333a931ad3858f07"
+    }
+  }
+}

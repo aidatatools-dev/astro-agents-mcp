@@ -1,0 +1,288 @@
+{
+  "tool": "day_summary",
+  "arguments": {
+    "date": "2026-08-10",
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  },
+  "structuredContent": {
+    "endpoint": "astronomy/day",
+    "result": {
+      "subject": {
+        "location": {
+          "latitude": 48.8566,
+          "longitude": 2.3522,
+          "elevation_m": 0.0
+        },
+        "timezone": "Europe/Paris",
+        "timezone_source": "resolved_from_coordinates",
+        "date": "2026-08-10",
+        "window_utc": {
+          "start": "2026-08-09T22:00:00Z",
+          "end": "2026-08-10T22:00:00Z"
+        }
+      },
+      "settings": {
+        "conventions": {
+          "sun": "astronomy/rise-set conventions (upper limb, 34' refraction; twilight at -6/-12/-18 deg)",
+          "moon": "astronomy/moon at local noon; moonrise/transit/moonset for the local day",
+          "planets_tonight": "astronomy/visibility defaults: altitude >= 10 deg while the Sun is <= -6 deg, the longest-elevated window of each planet, brightest first",
+          "next_events": "lunations and planetary stations of the next 7 days (geocentric, to the minute)",
+          "next_eclipse": "the next solar or lunar eclipse anywhere on Earth within a year, time of greatest eclipse"
+        }
+      },
+      "sun": {
+        "sunrise": {
+          "utc": "2026-08-10T04:36:07Z",
+          "local": "2026-08-10T06:36:07+02:00",
+          "timestamp": 1786336567,
+          "azimuth": 64.89
+        },
+        "solar_noon": {
+          "utc": "2026-08-10T11:55:58Z",
+          "local": "2026-08-10T13:55:58+02:00",
+          "timestamp": 1786362958,
+          "altitude": 56.61
+        },
+        "sunset": {
+          "utc": "2026-08-10T19:14:53Z",
+          "local": "2026-08-10T21:14:53+02:00",
+          "timestamp": 1786389293,
+          "azimuth": 294.82
+        },
+        "civil_dawn": {
+          "utc": "2026-08-10T04:00:18Z",
+          "local": "2026-08-10T06:00:18+02:00",
+          "timestamp": 1786334418
+        },
+        "civil_dusk": {
+          "utc": "2026-08-10T19:50:30Z",
+          "local": "2026-08-10T21:50:30+02:00",
+          "timestamp": 1786391430
+        },
+        "nautical_dawn": {
+          "utc": "2026-08-10T03:14:45Z",
+          "local": "2026-08-10T05:14:45+02:00",
+          "timestamp": 1786331685
+        },
+        "nautical_dusk": {
+          "utc": "2026-08-10T20:35:43Z",
+          "local": "2026-08-10T22:35:43+02:00",
+          "timestamp": 1786394143
+        },
+        "astronomical_dawn": {
+          "utc": "2026-08-10T02:20:53Z",
+          "local": "2026-08-10T04:20:53+02:00",
+          "timestamp": 1786328453
+        },
+        "astronomical_dusk": {
+          "utc": "2026-08-10T21:28:55Z",
+          "local": "2026-08-10T23:28:55+02:00",
+          "timestamp": 1786397335
+        },
+        "day_length_minutes": 878.8,
+        "golden_hour": [
+          {
+            "period": "morning",
+            "start": {
+              "utc": "2026-08-10T04:14:27Z",
+              "local": "2026-08-10T06:14:27+02:00",
+              "timestamp": 1786335267
+            },
+            "end": {
+              "utc": "2026-08-10T05:20:41Z",
+              "local": "2026-08-10T07:20:41+02:00",
+              "timestamp": 1786339241
+            }
+          },
+          {
+            "period": "evening",
+            "start": {
+              "utc": "2026-08-10T18:30:29Z",
+              "local": "2026-08-10T20:30:29+02:00",
+              "timestamp": 1786386629
+            },
+            "end": {
+              "utc": "2026-08-10T19:36:26Z",
+              "local": "2026-08-10T21:36:26+02:00",
+              "timestamp": 1786390586
+            }
+          }
+        ],
+        "blue_hour": [
+          {
+            "period": "morning",
+            "start": {
+              "utc": "2026-08-10T04:00:18Z",
+              "local": "2026-08-10T06:00:18+02:00",
+              "timestamp": 1786334418
+            },
+            "end": {
+              "utc": "2026-08-10T04:14:27Z",
+              "local": "2026-08-10T06:14:27+02:00",
+              "timestamp": 1786335267
+            }
+          },
+          {
+            "period": "evening",
+            "start": {
+              "utc": "2026-08-10T19:36:26Z",
+              "local": "2026-08-10T21:36:26+02:00",
+              "timestamp": 1786390586
+            },
+            "end": {
+              "utc": "2026-08-10T19:50:30Z",
+              "local": "2026-08-10T21:50:30+02:00",
+              "timestamp": 1786391430
+            }
+          }
+        ]
+      },
+      "moon": {
+        "name": "waning crescent",
+        "illuminated_fraction": 0.07581,
+        "age_days": 27.0114,
+        "waxing": false,
+        "distance_km": 363267.0,
+        "rise": {
+          "utc": "2026-08-10T01:02:42Z",
+          "local": "2026-08-10T03:02:42+02:00",
+          "timestamp": 1786323762,
+          "azimuth": 46.63
+        },
+        "transit": {
+          "utc": "2026-08-10T09:46:13Z",
+          "local": "2026-08-10T11:46:13+02:00",
+          "timestamp": 1786355173,
+          "altitude": 66.86
+        },
+        "set": {
+          "utc": "2026-08-10T18:15:21Z",
+          "local": "2026-08-10T20:15:21+02:00",
+          "timestamp": 1786385721,
+          "azimuth": 309.77
+        },
+        "state": "rises_and_sets",
+        "next_phase": {
+          "phase": "new_moon",
+          "utc": "2026-08-12T17:36:00Z",
+          "local": "2026-08-12T19:36:00+02:00",
+          "timestamp": 1786556160
+        }
+      },
+      "planets_tonight": [
+        {
+          "body": "saturn",
+          "from": {
+            "utc": "2026-08-10T22:16:01Z",
+            "local": "2026-08-11T00:16:01+02:00",
+            "timestamp": 1786400161
+          },
+          "to": {
+            "utc": "2026-08-11T04:01:52Z",
+            "local": "2026-08-11T06:01:52+02:00",
+            "timestamp": 1786420912
+          },
+          "best": {
+            "utc": "2026-08-11T03:30:00Z",
+            "local": "2026-08-11T05:30:00+02:00",
+            "timestamp": 1786419000,
+            "altitude": 44.51,
+            "azimuth": 180.11,
+            "magnitude": 0.58
+          },
+          "magnitude": 0.58
+        },
+        {
+          "body": "mars",
+          "from": {
+            "utc": "2026-08-11T01:42:16Z",
+            "local": "2026-08-11T03:42:16+02:00",
+            "timestamp": 1786412536
+          },
+          "to": {
+            "utc": "2026-08-11T04:01:52Z",
+            "local": "2026-08-11T06:01:52+02:00",
+            "timestamp": 1786420912
+          },
+          "best": {
+            "utc": "2026-08-11T04:00:00Z",
+            "local": "2026-08-11T06:00:00+02:00",
+            "timestamp": 1786420800,
+            "altitude": 31.96,
+            "azimuth": 89.71,
+            "magnitude": 1.29
+          },
+          "magnitude": 1.29
+        },
+        {
+          "body": "uranus",
+          "from": {
+            "utc": "2026-08-11T00:10:04Z",
+            "local": "2026-08-11T02:10:04+02:00",
+            "timestamp": 1786407004
+          },
+          "to": {
+            "utc": "2026-08-11T04:01:52Z",
+            "local": "2026-08-11T06:01:52+02:00",
+            "timestamp": 1786420912
+          },
+          "best": {
+            "utc": "2026-08-11T04:00:00Z",
+            "local": "2026-08-11T06:00:00+02:00",
+            "timestamp": 1786420800,
+            "altitude": 46.96,
+            "azimuth": 115.23,
+            "magnitude": 5.75
+          },
+          "magnitude": 5.75
+        },
+        {
+          "body": "neptune",
+          "from": {
+            "utc": "2026-08-10T21:49:55Z",
+            "local": "2026-08-10T23:49:55+02:00",
+            "timestamp": 1786398595
+          },
+          "to": {
+            "utc": "2026-08-11T04:01:52Z",
+            "local": "2026-08-11T06:01:52+02:00",
+            "timestamp": 1786420912
+          },
+          "best": {
+            "utc": "2026-08-11T02:50:00Z",
+            "local": "2026-08-11T04:50:00+02:00",
+            "timestamp": 1786416600,
+            "altitude": 41.49,
+            "azimuth": 180.16,
+            "magnitude": 7.7
+          },
+          "magnitude": 7.7
+        }
+      ],
+      "next_events": [
+        {
+          "type": "lunation",
+          "utc": "2026-08-12T17:37:00Z",
+          "local": "2026-08-12T19:37:00+02:00",
+          "timestamp": 1786556220,
+          "phase": "new_moon"
+        }
+      ],
+      "next_eclipse": {
+        "kind": "solar",
+        "eclipse_type": "total",
+        "utc": "2026-08-12T17:46:00Z",
+        "local": "2026-08-12T19:46:00+02:00",
+        "timestamp": 1786556760,
+        "note": "greatest eclipse, global; whether and how it is seen from this place: astronomy/eclipse-local"
+      }
+    },
+    "meta": {
+      "engine": "astro-agents/1.9.0",
+      "ephemeris": "NASA/JPL DE440 (1800-01-01..2200-01-01)",
+      "input_sha256": "3e3b613747e151ba39228d7e71c806764db2c064a2294bed4c20c205a2583744",
+      "result_sha256": "9a5885bae51d624822ffd64c7d6d49a2d0132ae4d25074c20ef60f149c3a8e07"
+    }
+  }
+}
