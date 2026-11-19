@@ -118,4 +118,9 @@ in the result. Data only: no predictions, never a signal or forecast.
 | Ephemeris | NASA/JPL DE440, 1800-2200 |
 | Licence | MIT (this repository); the hosted service has its own [terms](https://astro-agent.dev/terms) |
 
+## Agent skill
+
+[`skills/astronomy-data/SKILL.md`](skills/astronomy-data/SKILL.md) ([agentskills.io](https://agentskills.io) format), also
+served at https://astro-agent.dev/SKILL.md and https://astro-agent.dev/.well-known/skills/index.json: what to call, prices, payment, real examples.
+
 Support: https://astro-agent.dev/support
