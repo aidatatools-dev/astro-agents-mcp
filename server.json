@@ -3,7 +3,7 @@
   "name": "io.github.aidatatools-dev/astro-agents",
   "title": "Astro Agents - research-grade astronomical data API",
   "description": "Research-grade astronomical data API: NASA/JPL DE440 ephemerides, any date, SHA-256 verifiable.",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "websiteUrl": "https://astro-agent.dev/docs",
   "repository": {
     "url": "https://github.com/aidatatools-dev/astro-agents-mcp",
@@ -18,8 +18,6 @@
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "tools_usd_per_call": {
-        "resolve_birth_time": "0.01",
-        "planet_positions": "0.01",
         "rise_set_times": "0.01",
         "altitude_azimuth": "0.01",
         "observation_windows": "0.02",
@@ -31,14 +29,13 @@
         "planetary_phenomena": "0.10",
         "local_eclipse": "0.10",
         "solunar_periods": "0.01",
-        "sky_today": "0.01",
-        "aspects": "0.02",
-        "natal_chart": "0.06",
-        "transits": "0.08",
-        "synastry": "0.12",
-        "planetary_lines": "0.20",
-        "astro_event_calendar": "0.25",
-        "sky_analogues": "0.25",
+        "body_positions": "0.01",
+        "sky_now": "0.01",
+        "angular_separations": "0.02",
+        "celestial_events": "0.25",
+        "longitude_series": "0.20",
+        "similar_skies": "0.25",
+        "resolve_local_time": "0.01",
         "astro_catalog": "0",
         "verify_result_hash": "0"
       },
@@ -46,7 +43,7 @@
         "Positions from NASA/JPL DE440 (NASA/JPL), 1800-01-01..2200-01-01, via Skyfield: geocentric apparent, true equinox of date, IAU 2006/2000A.",
         "Historical time zones resolved for you (IANA tz database, DST of the era, Local Mean Time); ambiguous or non-existent local times are flagged, never guessed.",
         "Deterministic, no LLM: same input -> same bytes. Every response carries meta.input_sha256 and meta.result_sha256 (also as X-Input-SHA256 / X-Result-SHA256 headers); POST /v1/verify recomputes one.",
-        "Every convention is in the response: frame, equinox, perspective (geocentric or heliocentric), coordinates (ecliptic or equatorial), refraction, horizon and orbs.",
+        "Every convention is in the response: frame, equinox, perspective (geocentric or heliocentric), coordinates (ecliptic or equatorial), refraction, horizon and tolerances.",
         "Accuracy vs NASA/JPL Horizons (12,400 comparisons, 1800-2199): positions within 0.024\" (ICRF); ecliptic longitudes as served within 0.062\" over 1962-2026. Method and every number: https://astro-agent.dev/benchmark.md"
       ],
       "tagline": "Research-grade astronomical data & computation API — NASA/JPL DE440 ephemerides for any date, past, present or future, reproducible and SHA-256 verifiable.",

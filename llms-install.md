@@ -25,8 +25,8 @@ Add this entry to `cline_mcp_settings.json` (Cline → MCP Servers → Configure
 
 ## Check that it works
 
-1. The server lists 23 tools, including `day_summary`, `rise_set_times`, `altitude_azimuth`,
-   `moon_details`, `planet_positions`, `astro_event_calendar` and `astro_catalog`.
+1. The server lists 20 tools, including `day_summary`, `rise_set_times`, `altitude_azimuth`,
+   `moon_details`, `body_positions`, `celestial_events` and `astro_catalog`.
 2. Call `astro_catalog`: it is free and lists every tool with its price and an example request.
 3. Call `rise_set_times` with `{"date": "2026-06-21", "latitude": 48.8566, "longitude": 2.3522}`: sunrise
    05:46:57 and sunset 21:57:52, Paris local time (CEST).

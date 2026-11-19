@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "astro-agents",
-  "version": "1.9.0",
-  "description": "Research-grade astronomical data & computation API — NASA/JPL DE440 ephemerides for any date, past, present or future, reproducible and SHA-256 verifiable. Connects the Astro Agents MCP server (23 tools, remote, no install): rise, set and twilight times, altitude and azimuth, Moon phase and distance, the day's sky, planet positions, eclipses with local circumstances, planetary phenomena, seasons, time scales and coordinate conversion. Data only.",
+  "version": "1.10.0",
+  "description": "Research-grade astronomical data & computation API — NASA/JPL DE440 ephemerides for any date, past, present or future, reproducible and SHA-256 verifiable. Connects the Astro Agents MCP server (20 tools, remote, no install): rise, set and twilight times, altitude and azimuth, Moon phase and distance, the day's sky, planet positions, eclipses with local circumstances, planetary phenomena, seasons, time scales and coordinate conversion. Data only.",
   "author": {
     "name": "aidatatools-dev",
     "url": "https://astro-agent.dev"

@@ -1,4 +1,4 @@
-Astro Agents brings 23 astronomy tools from https://astro-agent.dev/mcp (no account needed). If the line below says
+Astro Agents brings 20 astronomy tools from https://astro-agent.dev/mcp (no account needed). If the line below says
 "installed but not enabled", run `hermes plugins enable astro-agents`, then start a new session and ask for
 today's sky, sunrise and sunset, the Moon's phase, planet positions or the next eclipse for a place.
 Positions are benchmarked against NASA/JPL Horizons: https://astro-agent.dev/benchmark.md

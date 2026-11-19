@@ -2,10 +2,10 @@
 
 **Research-grade astronomical data & computation API — NASA/JPL DE440 ephemerides for any date, past, present or future, reproducible and SHA-256 verifiable.**
 
-Astro Agents — a research-grade, verifiable astronomical data and computation API for developers, researchers and astronomy, calendar, observation and data applications. Ephemerides from the real NASA/JPL DE440: planetary positions (geocentric & heliocentric, ecliptic & equatorial: right ascension and declination), speeds and retrograde motion, Moon phase and illumination, angular separations between bodies (aspects, declination parallels), longitude time series, and a to-the-minute celestial event calendar (solar and lunar eclipses, stations, ingresses, lunations, out-of-bounds), 1800-2200. Any date — past, present or future — reproducible: no LLM, historical time zones resolved for you, every result SHA-256 hashed and checkable, accuracy benchmarked against NASA/JPL Horizons. Pay per call over REST or natively in MCP with x402 (USDC on Base or Solana) or MPP: zero setup, no account; or with prepaid credits or a monthly plan. Data only — no predictions, never a signal or forecast.
+Astro Agents — a research-grade, verifiable astronomical data and computation API for developers, researchers and astronomy, calendar, observation and data applications. From the NASA/JPL DE440 ephemeris: sunrise, sunset and twilight, altitude and azimuth, observation windows, the Moon's phase and distance, the day's sky for a place, planetary positions (geocentric & heliocentric, ecliptic & equatorial), angular separations, longitude time series, eclipses with local circumstances, planetary phenomena, seasons, time scales and coordinate conversion, and a to-the-minute celestial event calendar (solar and lunar eclipses, stations, lunations), 1800-2200. Any date — past, present or future — reproducible: no LLM, historical time zones resolved for you, every result SHA-256 hashed and checkable, accuracy benchmarked against NASA/JPL Horizons. A free key with an email, plans by card, or, for software agents, prepaid credits or pay per call in USDC (x402, MPP). Data only — no predictions, never a signal or forecast.
 
 - **MCP endpoint:** `https://astro-agent.dev/mcp` (remote, Streamable HTTP; nothing to install)
-- **Tools:** 23 (21 data tools, plus `astro_catalog` and `verify_result_hash`, free)
+- **Tools:** 20 (18 data tools, plus `astro_catalog` and `verify_result_hash`, free)
 - **Docs:** [https://astro-agent.dev/docs](https://astro-agent.dev/docs) · [Quickstart](https://astro-agent.dev/quickstart) · [Playground](https://astro-agent.dev/playground) ·
   [llms.txt](https://astro-agent.dev/llms.txt) · [OpenAPI](https://astro-agent.dev/openapi.json)
 - **Accuracy:** benchmarked against NASA/JPL Horizons ([benchmark.md](https://astro-agent.dev/benchmark.md))
@@ -60,21 +60,21 @@ MultiServerMCPClient({"astro": {"transport": "streamable_http", "url": "https://
 
 | Tool | Price | What it returns |
 |---|---|---|
-| `planet_positions` | $0.01 | Planetary positions and ephemeris API (NASA/JPL DE440): the longitude, sign, latitude, speed and retrograde flag of the Sun, Moon, planets, lunar nodes and Lilith at any moment, geocentric or heliocentric, ecliptic or equatorial (declination, out-of-bounds). |
-| `sky_today` | $0.01 | The sky now (no location needed): planet positions, retrogrades and the Moon phase now, plus the exact times of the next ingresses, Mercury retrograde and other stations, new and full moons and planetary aspects over the coming days. |
-| `aspects` | $0.02 | Angular separations (aspects) between planets at a moment, or between longitudes you supply, with orb, exactness and applying or separating. |
-| `resolve_birth_time` | $0.01 | Local time to UTC conversion: convert a local date, time and place into exact Universal Time, with the historical time zone and UTC offset, Delta T, Local Mean Time and true solar time. |
+| `body_positions` | $0.01 | Planetary positions and ephemeris API (NASA/JPL DE440): the ecliptic longitude, latitude, speed, retrograde flag and distance of the Sun, Moon, planets and lunar nodes at any moment 1800-2200, geocentric or heliocentric, ecliptic or equatorial (right ascension, declination). |
+| `sky_now` | $0.01 | The sky now (no location needed): planet positions, retrograde planets and the Moon phase, plus the exact UTC minute of the next stations, lunations and separations. |
+| `angular_separations` | $0.02 | Angular separations between planets at a moment, or between longitudes you supply: the pairs near 0, 60, 90, 120 or 180 degrees (or any angle you choose) with the deviation, approaching or receding; optionally equal and opposite declinations. |
+| `resolve_local_time` | $0.01 | Local time to UTC conversion: convert a local date, time and place into exact Universal Time, with the historical time zone and UTC offset, Delta T, Local Mean Time and true solar time. |
 
 ### Calendars and long ranges
 
 | Tool | Price | What it returns |
 |---|---|---|
-| `astro_event_calendar` | $0.25 | Celestial event calendar (astronomical events): the exact UTC minute and unix timestamp of every eclipse, Mercury retrograde and other station, ingress, new and full moon, planetary aspect, declination parallel and out-of-bounds between two dates, 1800-2200, each with a stable key to join on other data. |
+| `celestial_events` | $0.25 | Celestial event calendar: the exact UTC minute and unix timestamp of every solar and lunar eclipse, planetary station (retrograde / direct), lunation and separation between two dates, 1800-2200. |
 | `planetary_phenomena` | $0.10 | Planetary phenomena between two dates: oppositions, conjunctions with the Sun, greatest elongations of Mercury and Venus, conjunctions between planets, perihelion and aphelion. |
 | `local_eclipse` | $0.10 | Solar and lunar eclipses seen from a place: local type, contact times (C1-C4, P1-P4, U1-U4), magnitude, obscuration, duration of totality and the Sun's or Moon's altitude. |
 | `seasons` | $0.01 | Equinoxes and solstices of a year, Earth's perihelion and aphelion, and optionally the Sun day by day (sunrise, sunset, day length, declination, equation of time) for a place. |
-| `planetary_lines` | $0.20 | Planetary longitude series (angular longitude projections): planet degrees seen from the Earth and from the Sun (geocentric and heliocentric) at a moment or as an hourly-to-weekly time series keyed by unix timestamp, with angular offsets, multi-body longitude averages and an optional linear projection onto a value scale, (degree + 360k) x unit. |
-| `sky_analogues` | $0.25 | Sky similarity search (matching skies, planetary cycle analogues): find the past or future dates whose planetary positions best match a reference sky (a moment, now, positions you give, or the sky at a local date-time and place), ranked by a stated angular distance, to line up any dated data with similar skies. |
+| `longitude_series` | $0.20 | Planetary longitude time series: planet degrees seen from the Earth and from the Sun (geocentric and heliocentric) at a moment or every hour to every week, as pandas-ready columns, with speeds, retrograde flags and declinations. |
+| `similar_skies` | $0.25 | Sky similarity search: find the past or future dates whose planetary positions best match a reference sky, ranked by a stated angular distance in degrees. |
 
 ### Time and coordinates
 
@@ -82,14 +82,6 @@ MultiServerMCPClient({"astro": {"transport": "streamable_http", "url": "https://
 |---|---|---|
 | `time_scales` | $0.01 | Julian day, modified Julian day, sidereal time (Greenwich and local, mean and apparent), Delta T, TAI-UTC and UT1-UTC for a moment. |
 | `convert_coordinates` | $0.01 | Convert sky coordinates between equatorial (J2000, of date), ecliptic, galactic and horizontal (alt-az) frames. |
-
-### Sky configurations (a place and a moment, compared)
-
-| Tool | Price | What it returns |
-|---|---|---|
-| `natal_chart` | $0.06 | Sky configuration at a datetime & location (positional snapshot): planets in the ecliptic signs and in houses (11 house systems), ascendant, MC, aspects and a summary. |
-| `transits` | $0.08 | Transits to a reference sky configuration (a datetime & location snapshot): the aspects from the sky at a moment, and the exact dates they perfect over a window of up to a year. |
-| `synastry` | $0.12 | Pairwise angular geometry between two sky states (datetime & location each): cross-aspects, house overlays both ways and composite midpoints. |
 
 `astro_catalog` (free) lists every tool with its price and an example; `verify_result_hash` (free) recomputes a
 result's SHA-256.
@@ -120,7 +112,7 @@ in the result. Data only: no predictions, never a signal or forecast.
 | | |
 |---|---|
 | Name in the MCP Registry | `io.github.aidatatools-dev/astro-agents` |
-| Version | 1.9.0 |
+| Version | 1.10.0 |
 | Transport | Streamable HTTP, stateless |
 | Authentication | none required; optional `X-Credits-Token` header |
 | Ephemeris | NASA/JPL DE440, 1800-2200 |
