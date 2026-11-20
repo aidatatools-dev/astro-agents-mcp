@@ -7,4 +7,4 @@ No `mcp__astro_agents__*` tools in the session? Hermes needs its `mcp` extra (pa
 source checkout run `uv sync --extra mcp`). `hermes plugins show astro-agents` should say `Status: enabled`.
 
 1 free call per client on the $0.01-0.02 tools; a free key on https://astro-agent.dev/pricing (header `X-Credits-Token`) gives
-10,000 calls a month. `astro_catalog` is free and lists every tool with its price.
+1,000 calls a month, up to 100 of them on the premium data routes. `astro_catalog` is free and lists every tool with its price.

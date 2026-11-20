@@ -95,7 +95,7 @@ real outputs: [examples/](examples/).
 ## Pricing and keys
 
 - **Free:** each client gets 1 free call on the $0.01-0.02 tools; a free key (Free plan on [https://astro-agent.dev/pricing](https://astro-agent.dev/pricing))
-  gives 10,000 calls a month on the core tools and 100 on the premium data tools.
+  gives 1,000 calls a month, up to 100 of them on the premium data routes.
 - **With a key:** set the HTTP header `X-Credits-Token` in your MCP client configuration (a plan key or a prepaid-credits token).
 - **Pay per call:** an unpaid paid tool returns a standard x402 offer (USDC on Base or Solana) in `structuredContent`;
   an x402 MCP client pays and retries with it in `_meta["x402/payment"]`.
